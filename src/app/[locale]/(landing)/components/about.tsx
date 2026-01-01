@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart3, DollarSign, TrendingUp, Truck } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import * as m from "motion/react-m";
 import ExportedImage from "next-image-export-optimizer";
 import { useTranslations } from "next-intl";
@@ -8,145 +8,189 @@ import { useTranslations } from "next-intl";
 export default function AboutSection() {
   const t = useTranslations("IndexPage.about");
 
-  const stats = [
-    {
-      value: t("stat1"),
-      label: t("stat1Label"),
-      icon: TrendingUp,
-      color: "text-brand-green",
-      bgColor: "bg-brand-green/10"
-    },
-    {
-      value: t("stat2"),
-      label: t("stat2Label"),
-      icon: DollarSign,
-      color: "text-primary",
-      bgColor: "bg-primary/10"
-    },
-    {
-      value: t("stat3"),
-      label: t("stat3Label"),
-      icon: Truck,
-      color: "text-accent",
-      bgColor: "bg-accent/10"
-    },
-    {
-      value: t("stat4"),
-      label: t("stat4Label"),
-      icon: BarChart3,
-      color: "text-brand-blue",
-      bgColor: "bg-brand-blue/10"
-    }
-  ];
-
   return (
-    <section
-      id="about"
-      className="bg-brand-cream relative overflow-hidden py-20 lg:py-32"
-    >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,107,53,0.05)_0%,transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,184,0,0.05)_0%,transparent_50%)]" />
+    <section id="about" className="relative overflow-hidden">
+      {/* Part 1: About Us - Text first, Image second */}
+      <div className="bg-brand-cream relative py-24 lg:py-32">
+        {/* Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,107,53,0.06)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(255,184,0,0.06)_0%,transparent_50%)]" />
 
-      <div className="container relative z-10 mx-auto px-4">
-        {/* Header */}
-        <m.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center"
-        >
-          <div className="border-primary/30 bg-primary/10 text-primary mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
-            <span className="bg-primary h-2 w-2 rounded-full" />
-            {t("badge")}
-          </div>
-          <h2 className="text-secondary mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
-            {t("title")}
-          </h2>
-        </m.div>
-
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Content Side */}
-          <m.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-secondary/70 mb-6 text-lg leading-relaxed">
-              {t("description")}
-            </p>
-            <p className="text-secondary/70 mb-10 text-lg leading-relaxed">
-              {t("description2")}
-            </p>
-
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => (
-                <m.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="group rounded-2xl border border-gray-100 bg-white p-5 shadow-lg transition-all hover:shadow-xl"
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* Content */}
+            <m.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <m.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="border-primary/20 from-primary/10 to-brand-yellow/10 text-primary bg-linear-to-r mb-6 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium"
+              >
+                <m.span
+                  animate={{ rotate: [0, 15, -15, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
                 >
-                  <div
-                    className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl ${stat.bgColor}`}
-                  >
-                    <stat.icon className={`h-5 w-5 ${stat.color}`} />
-                  </div>
-                  <p className="text-secondary text-2xl font-bold">
-                    {stat.value}
-                  </p>
-                  <p className="text-secondary/60 text-sm">{stat.label}</p>
-                </m.div>
-              ))}
-            </div>
-          </m.div>
+                  <Sparkles className="h-4 w-4" />
+                </m.span>
+                {t("badge")}
+              </m.div>
 
-          {/* Image Side */}
-          <m.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="relative">
-              {/* Main Image */}
-              <div className="shadow-primary/10 relative overflow-hidden rounded-3xl shadow-2xl">
+              <m.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-secondary mb-2 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl"
+              >
+                {t("title")}
+              </m.h2>
+
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35 }}
+                viewport={{ once: true }}
+                className="text-primary mb-6 text-lg font-medium"
+              >
+                {t("subtitle")}
+              </m.p>
+
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-secondary/70 mb-4 text-lg leading-relaxed"
+              >
+                {t("description")}
+              </m.p>
+
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-secondary/70 text-lg leading-relaxed"
+              >
+                {t("description2")}
+              </m.p>
+            </m.div>
+
+            {/* Image */}
+            <m.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <m.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="shadow-primary/10 relative overflow-hidden rounded-3xl shadow-2xl"
+              >
                 <ExportedImage
-                  src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?w=700&q=80"
+                  src="/images/about.jpeg"
                   alt="Professional Kitchen"
                   width={600}
                   height={450}
                   className="h-auto w-full object-cover"
                 />
-                <div className="bg-linear-to-t from-secondary/40 absolute inset-0 to-transparent" />
-              </div>
+              </m.div>
+            </m.div>
+          </div>
+        </div>
+      </div>
 
-              {/* Floating Badge */}
+      {/* Part 2: Our Mission - Image first, Text second */}
+      <div className="relative bg-white pt-24 lg:pt-32">
+        {/* Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(255,107,53,0.04)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,rgba(255,184,0,0.04)_0%,transparent_50%)]" />
+
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            {/* Image */}
+            <m.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <m.div
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+                className="shadow-primary/10 relative max-h-[400px] overflow-hidden rounded-3xl shadow-2xl"
+              >
+                <ExportedImage
+                  src="/images/mission.jpeg"
+                  alt="Cloud Kitchen Mission"
+                  width={600}
+                  height={400}
+                  className="h-full w-full object-cover"
+                />
+              </m.div>
+            </m.div>
+
+            {/* Content */}
+            <m.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <m.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="border-primary/20 absolute -bottom-6 -start-6 rounded-2xl border bg-white p-5 shadow-xl lg:-start-12"
+                className="border-primary/20 from-primary/10 to-brand-yellow/10 text-primary bg-linear-to-r mb-6 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium"
               >
-                <div className="flex items-center gap-4">
-                  <div className="bg-linear-to-br from-primary to-accent flex h-14 w-14 items-center justify-center rounded-xl">
-                    <TrendingUp className="h-7 w-7 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-secondary text-2xl font-bold">44%</p>
-                    <p className="text-secondary/60 text-sm">توفير التكاليف</p>
-                  </div>
-                </div>
+                <m.span
+                  animate={{ rotate: [0, 15, -15, 0] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Sparkles className="h-4 w-4" />
+                </m.span>
+                {t("missionBadge")}
               </m.div>
-            </div>
-          </m.div>
+
+              <m.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="text-secondary mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl"
+              >
+                {t("missionTitle")}
+              </m.h2>
+
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="text-secondary/70 mb-4 text-lg leading-relaxed"
+              >
+                {t("missionDescription")}
+              </m.p>
+
+              <m.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="text-secondary/70 text-lg leading-relaxed"
+              >
+                {t("missionDescription2")}
+              </m.p>
+            </m.div>
+          </div>
         </div>
       </div>
     </section>
