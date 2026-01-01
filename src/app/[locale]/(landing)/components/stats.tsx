@@ -11,33 +11,25 @@ const stats = [
     key: "kitchens" as const,
     value: 50,
     suffix: "+",
-    icon: ChefHat,
-    color: "text-primary",
-    bgColor: "bg-primary/10"
+    icon: ChefHat
   },
   {
     key: "brands" as const,
     value: 100,
     suffix: "+",
-    icon: Tag,
-    color: "text-accent",
-    bgColor: "bg-accent/10"
+    icon: Tag
   },
   {
     key: "orders" as const,
     value: 10000,
     suffix: "+",
-    icon: Package,
-    color: "text-brand-green",
-    bgColor: "bg-brand-green/10"
+    icon: Package
   },
   {
     key: "satisfaction" as const,
     value: 98,
     suffix: "%",
-    icon: Star,
-    color: "text-brand-blue",
-    bgColor: "bg-brand-blue/10"
+    icon: Star
   }
 ];
 
@@ -45,12 +37,13 @@ export default function StatsSection() {
   const t = useTranslations("IndexPage.stats");
 
   return (
-    <section className="bg-brand-cream relative overflow-hidden py-16 lg:py-24">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,53,0.05)_0%,transparent_70%)]" />
+    <section className="bg-brand-cream relative overflow-hidden py-16">
+      {/* Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,107,53,0.12)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(255,184,0,0.12)_0%,transparent_50%)]" />
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
           {stats.map((stat, index) => (
             <m.div
               key={stat.key}
@@ -58,21 +51,25 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="group text-center"
+              whileHover={{ y: -5 }}
+              className="group"
             >
-              <m.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className={`mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl ${stat.bgColor} transition-transform`}
-              >
-                <stat.icon className={`h-8 w-8 ${stat.color}`} />
-              </m.div>
-              <div className="text-secondary mb-2 text-4xl font-bold md:text-5xl">
-                <AnimatedCounter end={stat.value} duration={2} />
-                <span className="text-primary">{stat.suffix}</span>
+              <div className="p-6 text-center lg:p-8">
+                <m.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.2 }}
+                  className="from-primary/10 to-brand-yellow/10 group-hover:from-primary/20 group-hover:to-brand-yellow/20 bg-linear-to-br mx-auto mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-150"
+                >
+                  <stat.icon className="text-primary h-8 w-8" />
+                </m.div>
+
+                <div className="text-secondary mb-2 text-4xl font-bold md:text-5xl">
+                  <AnimatedCounter end={stat.value} duration={2000} />
+                  <span className="text-primary">{stat.suffix}</span>
+                </div>
+
+                <p className="text-secondary/60 font-medium">{t(stat.key)}</p>
               </div>
-              <p className="text-secondary/60 font-medium">
-                {t(stat.key as "kitchens")}
-              </p>
             </m.div>
           ))}
         </div>
