@@ -45,69 +45,72 @@
 :root {
   --radius: 0.625rem;
 
-  /* Al-Jawdah Real Estate Brand Colors */
-  --brand-gold: #e3b950;
-  --brand-gold-light: #f0d078;
-  --brand-gold-dark: #c9a040;
-  --brand-navy: #1a2b4a;
-  --brand-navy-dark: #0f1a2e;
-  --brand-cream: #faf8f5;
-  --brand-warm-white: #fefdfb;
+  /* Bite Box Brand Colors - Fresh & Modern Food Theme */
+  --brand-orange: #FF6B35;
+  --brand-orange-light: #FF8C5A;
+  --brand-orange-dark: #E55A2B;
+  --brand-yellow: #FFB800;
+  --brand-yellow-light: #FFCC33;
+  --brand-green: #2ECC71;
+  --brand-green-dark: #27AE60;
+  --brand-dark: #1A1A2E;
+  --brand-dark-light: #16213E;
+  --brand-cream: #FFF8F0;
+  --brand-warm-white: #FFFCF9;
 
-  /* Main backgrounds - Elegant warm white */
+  /* Main backgrounds */
   --background: var(--brand-warm-white);
-  --foreground: #1a2b4a;
+  --foreground: #1A1A2E;
 
   /* Cards and elevated surfaces */
   --card: #ffffff;
-  --card-foreground: #1a2b4a;
+  --card-foreground: #1A1A2E;
   --popover: #ffffff;
-  --popover-foreground: #1a2b4a;
+  --popover-foreground: #1A1A2E;
 
-  /* Al-Jawdah Brand Gold - Primary */
-  --primary: var(--brand-gold);
-  --primary-foreground: #1a2b4a;
+  /* Primary - Vibrant Orange */
+  --primary: var(--brand-orange);
+  --primary-foreground: #ffffff;
 
-  /* Al-Jawdah Brand Navy - Secondary */
-  --secondary: var(--brand-navy);
+  /* Secondary - Dark Navy */
+  --secondary: var(--brand-dark);
   --secondary-foreground: #ffffff;
 
-  /* Muted elements - Light cream */
+  /* Muted elements */
   --muted: var(--brand-cream);
   --muted-foreground: #6b7280;
 
-  /* Accent - Darker gold variation */
-  --accent: var(--brand-gold-dark);
-  --accent-foreground: #1a2b4a;
+  /* Accent - Yellow */
+  --accent: var(--brand-yellow);
+  --accent-foreground: #1A1A2E;
 
   /* Destructive */
   --destructive: #dc2626;
 
-  /* Borders and inputs - Subtle separation */
+  /* Borders and inputs */
   --border: #e8e4de;
   --input: #e8e4de;
-  --ring: var(--brand-gold);
+  --ring: var(--brand-orange);
 
-  /* Charts - Brand color palette */
-  --chart-1: var(--brand-gold);
-  --chart-2: var(--brand-navy);
-  --chart-3: var(--brand-gold-dark);
-  --chart-4: #0f1a2e;
-  --chart-5: #f0d078;
+  /* Charts */
+  --chart-1: var(--brand-orange);
+  --chart-2: var(--brand-yellow);
+  --chart-3: var(--brand-green);
+  --chart-4: var(--brand-dark);
+  --chart-5: var(--brand-orange-light);
 
   /* Sidebar */
   --sidebar: #ffffff;
-  --sidebar-foreground: #1a2b4a;
-  --sidebar-primary: var(--brand-gold);
-  --sidebar-primary-foreground: #1a2b4a;
+  --sidebar-foreground: #1A1A2E;
+  --sidebar-primary: var(--brand-orange);
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: var(--brand-cream);
-  --sidebar-accent-foreground: #1a2b4a;
+  --sidebar-accent-foreground: #1A1A2E;
   --sidebar-border: #e8e4de;
-  --sidebar-ring: var(--brand-gold);
+  --sidebar-ring: var(--brand-orange);
 }
 
 .dark {
-  /* Dark mode - Professional dark theme */
   --background: #0f1419;
   --foreground: #f9fafb;
 
@@ -116,38 +119,38 @@
   --popover: #1a1f26;
   --popover-foreground: #f9fafb;
 
-  --primary: var(--brand-gold);
-  --primary-foreground: #1a2b4a;
+  --primary: var(--brand-orange);
+  --primary-foreground: #ffffff;
 
-  --secondary: var(--brand-navy);
+  --secondary: var(--brand-dark-light);
   --secondary-foreground: #ffffff;
 
   --muted: #2a2520;
   --muted-foreground: #9ca3af;
 
-  --accent: var(--brand-gold-dark);
-  --accent-foreground: #1a2b4a;
+  --accent: var(--brand-yellow);
+  --accent-foreground: #1A1A2E;
 
   --destructive: #ef4444;
 
   --border: #3a3530;
   --input: #3a3530;
-  --ring: var(--brand-gold);
+  --ring: var(--brand-orange);
 
-  --chart-1: var(--brand-gold);
-  --chart-2: var(--brand-navy);
-  --chart-3: var(--brand-gold-dark);
-  --chart-4: #0f1a2e;
-  --chart-5: #f0d078;
+  --chart-1: var(--brand-orange);
+  --chart-2: var(--brand-yellow);
+  --chart-3: var(--brand-green);
+  --chart-4: var(--brand-dark);
+  --chart-5: var(--brand-orange-light);
 
   --sidebar: #1a1f26;
   --sidebar-foreground: #f9fafb;
-  --sidebar-primary: var(--brand-gold);
-  --sidebar-primary-foreground: #1a2b4a;
+  --sidebar-primary: var(--brand-orange);
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #2a2520;
   --sidebar-accent-foreground: #f9fafb;
   --sidebar-border: #3a3530;
-  --sidebar-ring: var(--brand-gold);
+  --sidebar-ring: var(--brand-orange);
 }
 
 @layer base {
@@ -241,25 +244,24 @@
     scroll-padding-top: 6rem;
   }
 
-  /* Enhanced shadows for Al-Jawdah */
+  /* Bite Box shadows */
   .shadow-elegant {
-    box-shadow: 0 10px 40px -10px rgba(227, 185, 80, 0.2);
+    box-shadow: 0 10px 40px -10px rgba(255, 107, 53, 0.2);
   }
 
-  /* Al-Jawdah brand glow */
   .glow-primary {
-    box-shadow: 0 0 20px rgba(227, 185, 80, 0.3);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
   }
 
   .glow-primary-lg {
-    box-shadow: 0 0 40px rgba(227, 185, 80, 0.2);
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.2);
   }
 
   /* Decorative patterns */
   .pattern-dots {
     background-image: radial-gradient(
       circle,
-      rgba(227, 185, 80, 0.1) 1px,
+      rgba(255, 107, 53, 0.1) 1px,
       transparent 1px
     );
     background-size: 20px 20px;
@@ -267,8 +269,8 @@
 
   .pattern-grid {
     background-image:
-      linear-gradient(rgba(227, 185, 80, 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(227, 185, 80, 0.05) 1px, transparent 1px);
+      linear-gradient(rgba(255, 107, 53, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 107, 53, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -276,16 +278,16 @@
   .gradient-overlay-primary {
     background: linear-gradient(
       135deg,
-      rgba(227, 185, 80, 0.1) 0%,
-      rgba(26, 43, 74, 0.05) 100%
+      rgba(255, 107, 53, 0.1) 0%,
+      rgba(255, 184, 0, 0.05) 100%
     );
   }
 
   .gradient-overlay-secondary {
     background: linear-gradient(
       135deg,
-      rgba(26, 43, 74, 0.1) 0%,
-      rgba(15, 26, 46, 0.05) 100%
+      rgba(26, 26, 46, 0.1) 0%,
+      rgba(22, 33, 62, 0.05) 100%
     );
   }
 
@@ -298,10 +300,10 @@
   }
 
   .glass-dark {
-    background: rgba(26, 43, 74, 0.8);
+    background: rgba(26, 26, 46, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(227, 185, 80, 0.2);
+    border: 1px solid rgba(255, 107, 53, 0.2);
   }
 }
 
@@ -396,9 +398,37 @@ html {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(227, 185, 80, 0.1),
+    rgba(255, 107, 53, 0.1),
     transparent
   );
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-30px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-steam {
+  animation: steam 2s ease-out infinite;
 }

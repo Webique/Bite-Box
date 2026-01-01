@@ -1,6 +1,89 @@
 {
   "IndexPage": {
     "hero": {
+      "badge": "Specialized Cloud Kitchens",
+      "title": "Bite Box",
+      "subtitle": "Cloud Kitchens",
+      "description": "We provide specialized cloud kitchens for preparing the most delicious dishes and innovative operational solutions for food projects and entrepreneurs in the restaurant industry",
+      "tagline": "Your bite faster – Your project easier",
+      "cta": "Contact Us",
+      "learnMore": "Learn More"
+    },
+    "about": {
+      "badge": "About Us",
+      "title": "Your Partner in Cloud Kitchens",
+      "description": "Bite Box is a leading cloud kitchen platform offering comprehensive solutions for entrepreneurs in the food sector. We provide an ideal environment to launch and operate your food projects efficiently and cost-effectively.",
+      "vision": "Our Vision",
+      "visionText": "To be the first choice for entrepreneurs in the food sector and help transform their dreams into successful projects.",
+      "mission": "Our Mission",
+      "missionText": "Empowering entrepreneurs to launch their food projects easily by providing fully equipped kitchens and integrated support services."
+    },
+    "services": {
+      "badge": "Our Services",
+      "title": "Complete Solutions for Your Food Project",
+      "description": "We offer a comprehensive range of services designed to support your project's success",
+      "service1": {
+        "title": "Fully Equipped Kitchens",
+        "description": "Modern kitchens equipped with the latest equipment and tools needed to prepare all types of dishes"
+      },
+      "service2": {
+        "title": "Licenses & Permits",
+        "description": "We help you obtain all necessary licenses and permits to operate your project legally"
+      },
+      "service3": {
+        "title": "Operational Support",
+        "description": "A specialized team to support you in all aspects of operations from planning to execution"
+      },
+      "service4": {
+        "title": "Delivery Solutions",
+        "description": "Partnerships with the best delivery companies to ensure your orders arrive quickly and with high quality"
+      },
+      "service5": {
+        "title": "Digital Marketing",
+        "description": "Integrated marketing strategies to increase your brand visibility and attract more customers"
+      },
+      "service6": {
+        "title": "Food Consulting",
+        "description": "Food industry experts to help you develop a distinctive and profitable menu"
+      }
+    },
+    "features": {
+      "badge": "Why Bite Box?",
+      "title": "Features That Make Us the Best Choice",
+      "feature1": {
+        "title": "Low Cost",
+        "description": "Save on rent and setup costs and start your project with a smaller budget"
+      },
+      "feature2": {
+        "title": "High Flexibility",
+        "description": "Choose the space and time that suits your project needs"
+      },
+      "feature3": {
+        "title": "Strategic Location",
+        "description": "Carefully selected locations to cover the largest number of customers"
+      },
+      "feature4": {
+        "title": "Continuous Support",
+        "description": "Support team available 24/7 to help you"
+      }
+    },
+    "stats": {
+      "kitchens": "Cloud Kitchens",
+      "brands": "Brands",
+      "orders": "Monthly Orders",
+      "satisfaction": "Customer Satisfaction"
+    },
+    "cta": {
+      "title": "Ready to Launch Your Project?",
+      "description": "Contact us today and get a free consultation to start your journey in the world of cloud kitchens",
+      "button": "Contact via WhatsApp",
+      "phone": "Or call us"
+    },
+    "contact": {
+      "badge": "Contact Us",
+      "title": "We're Here to Help",
+      "description": "Please leave your name and reason for contact, and you will be served as soon as possible",
+      "whatsappMessage": "Welcome to Bite Box Cloud Kitchens! 🍱☁️ We're happy to hear from you ✨"
     },
     "WhatsAppFloat": {
       "tooltip": "Contact us via WhatsApp"
@@ -19,10 +102,10 @@
     "backToHome": "Back to home"
   },
   "LocaleLayout": {
-    "name": "Al-Jawdah | Leading Real Estate Developer in Taif",
-    "short_name": "Al-Jawdah",
-    "description": "Al-Jawdah Real Estate Development - Since 2012, delivering innovative real estate projects in Taif and Saudi Arabia",
-    "keywords": ["Al-Jawdah", "Real Estate Development", "Taif Real Estate", "Construction", "Building Renovation", "Real Estate Brokerage", "Property Management", "Saudi Arabia Real Estate"]
+    "name": "Bite Box | Specialized Cloud Kitchens",
+    "short_name": "Bite Box",
+    "description": "Bite Box Cloud Kitchens - Specialized cloud kitchens for preparing delicious dishes and innovative operational solutions for food projects",
+    "keywords": ["Bite Box", "Cloud Kitchens", "Food Projects", "Entrepreneurs", "Restaurants", "Food Delivery", "Saudi Arabia"]
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -33,30 +116,30 @@
       "home": "Home",
       "about": "About Us",
       "services": "Services",
-      "projects": "Projects",
+      "features": "Features",
       "contact": "Contact"
     },
     "cta": "Contact Us",
-    "siteName": "Al-Jawdah",
-    "siteDescription": "Real Estate Development"
+    "siteName": "Bite Box",
+    "siteDescription": "Cloud Kitchens"
   },
   "Footer": {
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "projects": "Projects",
+    "features": "Features",
     "contact": "Contact",
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
     "connectWithUs": "Follow Us",
     "phone": "Phone",
     "email": "Email",
-    "location": "Taif, Al-Wissam",
-    "brandName": "Al-Jawdah",
-    "copyright": "© {year} Al-Jawdah Real Estate Development. All rights reserved",
+    "location": "Saudi Arabia",
+    "brandName": "Bite Box",
+    "copyright": "© {year} Bite Box Cloud Kitchens. All rights reserved",
     "allRightsReserved": "All rights reserved",
-    "companyDescription": "Since 2012, a leading real estate development company in Saudi Arabia. We strive to deliver innovative projects achieving sustainable economic and social value.",
+    "companyDescription": "Specialized cloud kitchens for preparing delicious dishes and innovative operational solutions for food projects and entrepreneurs in the restaurant industry.",
     "followUs": "Follow Us",
-    "vision2030": "Contributing to Saudi Vision 2030"
+    "tagline": "Your bite faster – Your project easier"
   }
 }

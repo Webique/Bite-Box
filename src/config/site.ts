@@ -1,21 +1,22 @@
 export const siteConfig = {
   links: {
-    instagram: "https://www.instagram.com/Aljawdahco1",
-    snapchat: "https://www.snapchat.com/add/Aljawdah_sa",
-    tiktok: "https://www.tiktok.com/@Aljawdahco",
-    whatsapp: "https://wa.me/966504719927"
+    instagram: "#",
+    snapchat: "#",
+    tiktok: "#",
+    whatsapp:
+      "https://wa.me/966582124313?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D8%A8%D9%83%20%D9%81%D9%8A%20Bite%20Box%20Cloud%20Kitchens!"
   },
 
   support: {
-    phone: "+966 50 471 9927",
-    email: "info@aljawdah.sa",
-    whatsapp: "+966504719927",
-    landline: "920020960"
+    phone: "058 212 4313",
+    email: "info@bitebox.sa",
+    whatsapp: "+966582124313",
+    landline: ""
   },
 
   location: {
-    city: "Taif",
-    district: "Al-Wissam",
+    city: "Riyadh",
+    district: "",
     country: "Saudi Arabia"
   },
 

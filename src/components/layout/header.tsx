@@ -32,6 +32,7 @@ export default function Header() {
     { label: t("nav.home"), href: "/" },
     { label: t("nav.about"), href: "#about" },
     { label: t("nav.services"), href: "#services" },
+    { label: t("nav.features"), href: "#features" },
     { label: t("nav.contact"), href: "#contact" }
   ];
 
@@ -39,34 +40,51 @@ export default function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        "shadow-brand-pink/5 bg-white/95 shadow-lg lg:bg-transparent lg:shadow-none",
-        isScrolled && "backdrop-blur-lg lg:bg-white/85 lg:shadow-lg"
+        isScrolled
+          ? "bg-white/95 shadow-lg shadow-[#FF6B35]/5 backdrop-blur-lg"
+          : "bg-transparent"
       )}
     >
-      {/* Elegant top accent line */}
+      {/* Top accent line */}
       <div
         className={cn(
-          "via-brand-pink bg-linear-to-r absolute inset-x-0 top-0 h-px from-transparent to-transparent transition-opacity duration-500",
-          "opacity-100 lg:opacity-0",
-          isScrolled && "lg:opacity-100"
+          "bg-linear-to-r absolute inset-x-0 top-0 h-1 from-[#FF6B35] via-[#FFB800] to-[#FF6B35] transition-opacity duration-500",
+          isScrolled ? "opacity-100" : "opacity-0"
         )}
       />
 
-      {/* Main Header */}
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between sm:h-24">
+        <div className="flex h-20 items-center justify-between lg:h-24">
           {/* Logo */}
           <m.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex h-full items-center"
+            className="flex items-center gap-3"
           >
             <Logo className="transition-all duration-300 hover:scale-105" />
+            <div className="hidden sm:block">
+              <p
+                className={cn(
+                  "text-xl font-bold transition-colors",
+                  isScrolled ? "text-[#1A1A2E]" : "text-white"
+                )}
+              >
+                {t("siteName")}
+              </p>
+              <p
+                className={cn(
+                  "text-xs font-medium transition-colors",
+                  isScrolled ? "text-[#FF6B35]" : "text-[#FFB800]"
+                )}
+              >
+                {t("siteDescription")}
+              </p>
+            </div>
           </m.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-1 lg:flex">
             {navItems.map((item, index) => (
               <m.div
                 key={index}
@@ -77,16 +95,11 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "group relative px-4 py-2 text-base font-medium transition-all duration-300",
-                    isScrolled ? "text-foreground" : "text-white",
-                    "hover:text-primary",
-                    "before:absolute before:bottom-0 before:start-1/2 before:h-0.5 before:w-0",
-                    "before:from-primary before:to-primary/60 before:bg-linear-to-r",
-                    "before:-translate-x-1/2 before:transition-all before:duration-300 rtl:before:translate-x-1/2",
-                    "hover:before:w-3/4",
-                    "after:bg-primary/5 after:absolute after:inset-0 after:rounded-lg",
-                    "after:opacity-0 after:transition-opacity after:duration-300",
-                    "hover:after:opacity-100"
+                    "group relative px-4 py-2 text-sm font-medium transition-all duration-300",
+                    isScrolled
+                      ? "text-[#1A1A2E] hover:text-[#FF6B35]"
+                      : "text-white/90 hover:text-white",
+                    "rounded-full hover:bg-[#FF6B35]/10"
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
@@ -95,9 +108,9 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button & Language Switcher */}
+          {/* CTA & Language */}
           <m.div
-            className="hidden items-center space-x-3 lg:flex rtl:space-x-reverse"
+            className="hidden items-center gap-3 lg:flex"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
@@ -105,7 +118,7 @@ export default function Header() {
             <LocaleSwitcher isTop={isScrolled} />
 
             <Button
-              className="hover:shadow-primary/40 group h-auto gap-2 rounded-full px-8 py-4 text-base font-bold shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg has-[>svg]:px-8 lg:flex"
+              className="group h-11 gap-2 rounded-full bg-[#FF6B35] px-6 text-sm font-semibold text-white shadow-lg shadow-[#FF6B35]/30 transition-all duration-300 hover:scale-105 hover:bg-[#E55A2B] hover:shadow-xl hover:shadow-[#FF6B35]/40"
               asChild
             >
               <Link
@@ -113,50 +126,48 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="size-5" />
+                <MessageCircle className="h-4 w-4 transition-transform group-hover:scale-110" />
                 {t("cta")}
               </Link>
             </Button>
           </m.div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-2 lg:hidden rtl:space-x-reverse">
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              className="flex items-center"
-            >
-              <LocaleSwitcher className="w-auto" isTop />
+          <div className="flex items-center gap-2 lg:hidden">
+            <LocaleSwitcher className="w-auto" isTop={isScrolled} />
 
-              <button
-                className="text-foreground hover:bg-muted rounded-md p-2 transition-all duration-300 hover:scale-105"
-                onClick={toggleMenu}
-                aria-label="Toggle menu"
-              >
-                <div className="space-y-1.5">
-                  <m.div
-                    animate={
-                      isMenuOpen ? { rotate: 45, y: 9 } : { rotate: 0, y: 0 }
-                    }
-                    transition={{ duration: 0.3 }}
-                    className="h-0.5 w-6 bg-current"
-                  />
-                  <m.div
-                    animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                    className="h-0.5 w-6 bg-current"
-                  />
-                  <m.div
-                    animate={
-                      isMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
-                    }
-                    transition={{ duration: 0.3 }}
-                    className="h-0.5 w-6 bg-current"
-                  />
-                </div>
-              </button>
-            </m.div>
+            <button
+              className={cn(
+                "rounded-lg p-2 transition-all duration-300",
+                isScrolled
+                  ? "text-[#1A1A2E] hover:bg-[#FF6B35]/10"
+                  : "text-white hover:bg-white/10"
+              )}
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <div className="space-y-1.5">
+                <m.div
+                  animate={
+                    isMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }
+                  }
+                  transition={{ duration: 0.3 }}
+                  className="h-0.5 w-6 bg-current"
+                />
+                <m.div
+                  animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="h-0.5 w-6 bg-current"
+                />
+                <m.div
+                  animate={
+                    isMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }
+                  }
+                  transition={{ duration: 0.3 }}
+                  className="h-0.5 w-6 bg-current"
+                />
+              </div>
+            </button>
           </div>
         </div>
 
@@ -168,65 +179,62 @@ export default function Header() {
             opacity: isMenuOpen ? 1 : 0
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className="overflow-hidden lg:hidden"
+          className={cn(
+            "overflow-hidden lg:hidden",
+            isScrolled ? "bg-white" : "bg-[#1A1A2E]/95 backdrop-blur-lg"
+          )}
         >
-          <nav className="border-border/20 space-y-2 border-t py-6">
-            <div className="space-y-3">
-              {navItems.map((item, index) => (
-                <m.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{
-                    opacity: isMenuOpen ? 1 : 0,
-                    x: isMenuOpen ? 0 : -20
-                  }}
-                  transition={{ delay: 0.1 * index, duration: 0.4 }}
-                >
-                  <Link
-                    href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-brand-burgundy hover:text-brand-pink hover:bg-brand-pink/5 focus:ring-brand-pink/20 group relative block rounded-xl px-3 py-4 text-base font-medium transition-all duration-300 hover:scale-[1.02] focus:outline-none"
-                  >
-                    <span className="relative z-10 flex items-center gap-3">
-                      {item.label}
-                    </span>
-                    <div
-                      className="absolute inset-0 rounded-xl opacity-0 transition-opacity group-hover:opacity-100"
-                      style={{
-                        background:
-                          "linear-gradient(to right, rgba(254, 133, 161, 0.1), transparent)"
-                      }}
-                    />
-                  </Link>
-                </m.div>
-              ))}
-
-              {/* CTA in Mobile Menu */}
+          <nav className="space-y-1 py-6">
+            {navItems.map((item, index) => (
               <m.div
-                initial={{ opacity: 0, y: -20 }}
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
                 animate={{
                   opacity: isMenuOpen ? 1 : 0,
-                  y: isMenuOpen ? 0 : -20
+                  x: isMenuOpen ? 0 : -20
                 }}
-                transition={{ delay: 0.5, duration: 0.4 }}
-                className="border-border/20 mt-6 border-t pt-6"
+                transition={{ delay: 0.1 * index, duration: 0.4 }}
               >
-                <Button
-                  className="h-auto w-full items-center gap-3 rounded-xl px-6 py-4 text-base font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-                  asChild
+                <Link
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={cn(
+                    "block rounded-xl px-4 py-3 text-base font-medium transition-all",
+                    isScrolled
+                      ? "text-[#1A1A2E] hover:bg-[#FF6B35]/10 hover:text-[#FF6B35]"
+                      : "text-white hover:bg-white/10"
+                  )}
                 >
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={siteConfig.links.whatsapp}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <MessageCircle className="size-5" />
-                    {t("cta")}
-                  </a>
-                </Button>
+                  {item.label}
+                </Link>
               </m.div>
-            </div>
+            ))}
+
+            {/* Mobile CTA */}
+            <m.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{
+                opacity: isMenuOpen ? 1 : 0,
+                y: isMenuOpen ? 0 : -20
+              }}
+              transition={{ delay: 0.5, duration: 0.4 }}
+              className="mt-4 px-4 pt-4"
+            >
+              <Button
+                className="h-12 w-full gap-3 rounded-xl bg-[#FF6B35] text-base font-semibold text-white shadow-lg transition-all hover:bg-[#E55A2B]"
+                asChild
+              >
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={siteConfig.links.whatsapp}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  {t("cta")}
+                </a>
+              </Button>
+            </m.div>
           </nav>
         </m.div>
       </div>

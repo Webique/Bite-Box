@@ -1,6 +1,6 @@
 "use client";
 
-import { useInView } from "framer-motion";
+import { useInView } from "motion/react";
 import { useRef } from "react";
 
 import { useCounter } from "@/hooks/use-counter";
@@ -14,7 +14,7 @@ interface AnimatedCounterProps {
   className?: string;
 }
 
-export function AnimatedCounter({
+export default function AnimatedCounter({
   end,
   duration = 2000,
   delay = 0,
@@ -35,7 +35,7 @@ export function AnimatedCounter({
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {count}
+      {count.toLocaleString()}
       {suffix}
     </span>
   );
