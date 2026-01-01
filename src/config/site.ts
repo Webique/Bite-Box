@@ -8,7 +8,7 @@ export const siteConfig = {
   },
 
   support: {
-    phone: "058 212 4313",
+    phone: "+966 58 212 4313",
     email: "info@bitebox.sa",
     whatsapp: "+966582124313",
     landline: ""
