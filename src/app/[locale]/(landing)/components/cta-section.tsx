@@ -1,9 +1,10 @@
 "use client";
 
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
+import WhatsAppIcon from "@/assets/icons/whatsapp-2.svg";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { Link } from "@/i18n/navigation.public";
@@ -79,13 +80,15 @@ export default function CTASection() {
               asChild
             >
               <Link href={siteConfig.links.whatsapp} target="_blank">
-                <MessageCircle className="h-5 w-5 transition-transform group-hover:scale-110" />
+                <WhatsAppIcon className="size-5 h-auto transition-transform group-hover:scale-110" />
                 {t("button")}
               </Link>
             </Button>
 
             <div className="flex items-center gap-3 text-white">
-              <span className="text-white/70">{t("phone")}</span>
+              <span className="hidden text-white/70 sm:inline">
+                {t("phone")}
+              </span>
               <a
                 href={`tel:${siteConfig.support.whatsapp}`}
                 className="flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 font-semibold backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20"
