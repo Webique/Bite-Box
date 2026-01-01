@@ -1,6 +1,6 @@
-# Nask
+# Bite Box
 
-This is the source code for the official website of Bella Notte.
+This is the source code for the official website of Bite Box.
 
 This is a [Next.js](https://nextjs.org) project with internationalization support (Arabic/English).
 
