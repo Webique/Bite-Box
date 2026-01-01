@@ -42,7 +42,7 @@ export default function Footer() {
             className="lg:col-span-5"
           >
             <div className="mb-6 flex items-center gap-3">
-              <Logo imgClassName="w-28 sm:w-32" />
+              <Logo imgClassName="w-32 sm:w-32" />
             </div>
 
             <p className="mb-6 max-w-md text-sm leading-relaxed text-white/60">
