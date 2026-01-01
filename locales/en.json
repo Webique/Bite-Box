@@ -1,0 +1,62 @@
+{
+  "IndexPage": {
+    "hero": {
+    },
+    "WhatsAppFloat": {
+      "tooltip": "Contact us via WhatsApp"
+    }
+  },
+  "Error": {
+    "title": "Sorry, an unexpected error occurred!",
+    "description": "<p>We apologize for this error we encountered.</p><p>You can try <retry>reloading the page</retry> you were visiting.</p>"
+  },
+  "NotFoundPage": {
+    "title": "Page not found",
+    "description": "Sorry, please check the address bar in your browser or use the navigation to go to a known page.",
+    "retryButton": "Try again",
+    "contactSupport": "Contact support",
+    "goBack": "Go back",
+    "backToHome": "Back to home"
+  },
+  "LocaleLayout": {
+    "name": "Al-Jawdah | Leading Real Estate Developer in Taif",
+    "short_name": "Al-Jawdah",
+    "description": "Al-Jawdah Real Estate Development - Since 2012, delivering innovative real estate projects in Taif and Saudi Arabia",
+    "keywords": ["Al-Jawdah", "Real Estate Development", "Taif Real Estate", "Construction", "Building Renovation", "Real Estate Brokerage", "Property Management", "Saudi Arabia Real Estate"]
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, ar {🇸🇦 Arabic} en {🇺🇸 English} other {Unknown}}"
+  },
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "cta": "Contact Us",
+    "siteName": "Al-Jawdah",
+    "siteDescription": "Real Estate Development"
+  },
+  "Footer": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "connectWithUs": "Follow Us",
+    "phone": "Phone",
+    "email": "Email",
+    "location": "Taif, Al-Wissam",
+    "brandName": "Al-Jawdah",
+    "copyright": "© {year} Al-Jawdah Real Estate Development. All rights reserved",
+    "allRightsReserved": "All rights reserved",
+    "companyDescription": "Since 2012, a leading real estate development company in Saudi Arabia. We strive to deliver innovative projects achieving sustainable economic and social value.",
+    "followUs": "Follow Us",
+    "vision2030": "Contributing to Saudi Vision 2030"
+  }
+}
