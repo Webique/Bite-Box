@@ -173,7 +173,13 @@
       "submit": "Submit",
       "submitting": "Submitting...",
       "success": "Your message has been sent successfully! We will contact you soon.",
-      "whatsappMessage": "Welcome to Bite Box Cloud Kitchens! 🍱☁️ We're happy to hear from you ✨"
+      "whatsappMessage": "Welcome to Bite Box Cloud Kitchens! 🍱☁️ We're happy to hear from you ✨",
+      "whatsapp": "WhatsApp",
+      "whatsappDesc": "Chat with us directly",
+      "callUs": "Call Us",
+      "emailUs": "Email",
+      "location": "Riyadh, Saudi Arabia",
+      "chatOnWhatsapp": "Chat on WhatsApp"
     },
     "WhatsAppFloat": {
       "tooltip": "Contact us via WhatsApp"
