@@ -5,6 +5,7 @@ import {
   FileCheck,
   Headphones,
   Snowflake,
+  Sparkles,
   Truck,
   UtensilsCrossed
 } from "lucide-react";
@@ -14,45 +15,27 @@ import { useTranslations } from "next-intl";
 const services = [
   {
     key: "service1" as const,
-    icon: ChefHat,
-    color: "from-primary to-brand-orange-light",
-    bgColor: "bg-primary/10",
-    iconColor: "text-primary"
+    icon: ChefHat
   },
   {
     key: "service2" as const,
-    icon: Snowflake,
-    color: "from-brand-blue to-[#2980B9]",
-    bgColor: "bg-brand-blue/10",
-    iconColor: "text-brand-blue"
+    icon: Snowflake
   },
   {
     key: "service3" as const,
-    icon: Headphones,
-    color: "from-brand-green to-brand-green-dark",
-    bgColor: "bg-brand-green/10",
-    iconColor: "text-brand-green"
+    icon: Headphones
   },
   {
     key: "service4" as const,
-    icon: FileCheck,
-    color: "from-accent to-brand-yellow-light",
-    bgColor: "bg-accent/10",
-    iconColor: "text-accent"
+    icon: FileCheck
   },
   {
     key: "service5" as const,
-    icon: Truck,
-    color: "from-brand-purple to-[#8E44AD]",
-    bgColor: "bg-brand-purple/10",
-    iconColor: "text-brand-purple"
+    icon: Truck
   },
   {
     key: "service6" as const,
-    icon: UtensilsCrossed,
-    color: "from-brand-red to-[#C0392B]",
-    bgColor: "bg-brand-red/10",
-    iconColor: "text-brand-red"
+    icon: UtensilsCrossed
   }
 ];
 
@@ -62,37 +45,60 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-white py-20 lg:py-32"
+      className="relative overflow-hidden bg-white py-24 lg:py-36"
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="bg-primary/5 absolute end-0 top-0 h-96 w-96 rounded-full blur-3xl" />
-        <div className="bg-accent/5 absolute bottom-0 start-0 h-96 w-96 rounded-full blur-3xl" />
-      </div>
+      {/* Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,107,53,0.04)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(255,184,0,0.04)_0%,transparent_50%)]" />
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Header */}
         <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
+          className="mb-16 text-center lg:mb-20"
         >
-          <div className="border-primary/30 bg-primary/10 text-primary mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
-            <span className="bg-primary h-2 w-2 rounded-full" />
+          <m.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="border-primary/20 from-primary/10 to-brand-yellow/10 text-primary bg-linear-to-r mb-8 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium"
+          >
+            <m.span
+              animate={{ rotate: [0, 15, -15, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Sparkles className="h-4 w-4" />
+            </m.span>
             {t("badge")}
-          </div>
-          <h2 className="text-secondary mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
+          </m.div>
+
+          <m.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-secondary mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl"
+          >
             {t("title")}
-          </h2>
-          <p className="text-secondary/70 mx-auto max-w-2xl text-lg">
+          </m.h2>
+
+          <m.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-secondary/60 mx-auto max-w-2xl text-lg leading-relaxed"
+          >
             {t("description")}
-          </p>
+          </m.p>
         </m.div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {services.map((service, index) => (
             <m.div
               key={service.key}
@@ -100,32 +106,33 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              whileHover={{ y: -8 }}
+              className="group"
             >
-              {/* Hover Gradient */}
-              <div
-                className={`bg-linear-to-br absolute inset-0 ${service.color} opacity-0 transition-opacity duration-500 group-hover:opacity-5`}
-              />
+              <div className="hover:border-primary/30 relative h-full overflow-hidden rounded-3xl border border-gray-100 bg-white p-8 shadow-lg transition-all duration-150 hover:shadow-xl">
+                {/* Hover gradient overlay */}
+                <div className="from-primary/5 bg-linear-to-br absolute inset-0 to-transparent opacity-0 transition-opacity duration-150 group-hover:opacity-100" />
 
-              {/* Icon */}
-              <div
-                className={`mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl ${service.bgColor} transition-all duration-500 group-hover:scale-110`}
-              >
-                <service.icon className={`h-8 w-8 ${service.iconColor}`} />
+                {/* Icon */}
+                <m.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.2 }}
+                  className="from-primary/10 to-brand-yellow/10 group-hover:from-primary/20 group-hover:to-brand-yellow/20 bg-linear-to-br relative z-10 mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-150"
+                >
+                  <service.icon className="text-primary h-8 w-8" />
+                </m.div>
+
+                {/* Content */}
+                <h3 className="text-secondary group-hover:text-primary relative z-10 mb-3 text-xl font-bold transition-colors duration-150">
+                  {t(`${service.key}.title`)}
+                </h3>
+                <p className="text-secondary/60 relative z-10 leading-relaxed">
+                  {t(`${service.key}.description`)}
+                </p>
+
+                {/* Hover Glow */}
+                <div className="from-primary/20 to-brand-yellow/10 bg-linear-to-br absolute -bottom-20 -end-20 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
               </div>
-
-              {/* Content */}
-              <h3 className="text-secondary group-hover:text-primary mb-3 text-xl font-bold transition-colors">
-                {t(`${service.key}.title` as "service1.title")}
-              </h3>
-              <p className="text-secondary/70 leading-relaxed">
-                {t(`${service.key}.description` as "service1.description")}
-              </p>
-
-              {/* Decorative Corner */}
-              <div
-                className={`bg-linear-to-br absolute -bottom-10 -end-10 h-32 w-32 rounded-full ${service.color} opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-20`}
-              />
             </m.div>
           ))}
         </div>
