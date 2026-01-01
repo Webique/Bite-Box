@@ -41,14 +41,14 @@ export default function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-white/95 shadow-lg shadow-[#FF6B35]/5 backdrop-blur-lg"
+          ? "bg-white/95 shadow-lg shadow-primary/5 backdrop-blur-lg"
           : "bg-transparent"
       )}
     >
       {/* Top accent line */}
       <div
         className={cn(
-          "bg-linear-to-r absolute inset-x-0 top-0 h-1 from-[#FF6B35] via-[#FFB800] to-[#FF6B35] transition-opacity duration-500",
+          "bg-linear-to-r absolute inset-x-0 top-0 h-1 from-primary via-accent to-primary transition-opacity duration-500",
           isScrolled ? "opacity-100" : "opacity-0"
         )}
       />
@@ -67,7 +67,7 @@ export default function Header() {
               <p
                 className={cn(
                   "text-xl font-bold transition-colors",
-                  isScrolled ? "text-[#1A1A2E]" : "text-white"
+                  isScrolled ? "text-secondary" : "text-white"
                 )}
               >
                 {t("siteName")}
@@ -75,7 +75,7 @@ export default function Header() {
               <p
                 className={cn(
                   "text-xs font-medium transition-colors",
-                  isScrolled ? "text-[#FF6B35]" : "text-[#FFB800]"
+                  isScrolled ? "text-primary" : "text-accent"
                 )}
               >
                 {t("siteDescription")}
@@ -97,9 +97,9 @@ export default function Header() {
                   className={cn(
                     "group relative px-4 py-2 text-sm font-medium transition-all duration-300",
                     isScrolled
-                      ? "text-[#1A1A2E] hover:text-[#FF6B35]"
+                      ? "text-secondary hover:text-primary"
                       : "text-white/90 hover:text-white",
-                    "rounded-full hover:bg-[#FF6B35]/10"
+                    "rounded-full hover:bg-primary/10"
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
@@ -118,7 +118,7 @@ export default function Header() {
             <LocaleSwitcher isTop={isScrolled} />
 
             <Button
-              className="group h-11 gap-2 rounded-full bg-[#FF6B35] px-6 text-sm font-semibold text-white shadow-lg shadow-[#FF6B35]/30 transition-all duration-300 hover:scale-105 hover:bg-[#E55A2B] hover:shadow-xl hover:shadow-[#FF6B35]/40"
+              className="group h-11 gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:scale-105 hover:bg-brand-orange-dark hover:shadow-xl hover:shadow-primary/40"
               asChild
             >
               <Link
@@ -140,7 +140,7 @@ export default function Header() {
               className={cn(
                 "rounded-lg p-2 transition-all duration-300",
                 isScrolled
-                  ? "text-[#1A1A2E] hover:bg-[#FF6B35]/10"
+                  ? "text-secondary hover:bg-primary/10"
                   : "text-white hover:bg-white/10"
               )}
               onClick={toggleMenu}
@@ -181,7 +181,7 @@ export default function Header() {
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className={cn(
             "overflow-hidden lg:hidden",
-            isScrolled ? "bg-white" : "bg-[#1A1A2E]/95 backdrop-blur-lg"
+            isScrolled ? "bg-white" : "bg-secondary/95 backdrop-blur-lg"
           )}
         >
           <nav className="space-y-1 py-6">
@@ -201,7 +201,7 @@ export default function Header() {
                   className={cn(
                     "block rounded-xl px-4 py-3 text-base font-medium transition-all",
                     isScrolled
-                      ? "text-[#1A1A2E] hover:bg-[#FF6B35]/10 hover:text-[#FF6B35]"
+                      ? "text-secondary hover:bg-primary/10 hover:text-primary"
                       : "text-white hover:bg-white/10"
                   )}
                 >
@@ -221,7 +221,7 @@ export default function Header() {
               className="mt-4 px-4 pt-4"
             >
               <Button
-                className="h-12 w-full gap-3 rounded-xl bg-[#FF6B35] text-base font-semibold text-white shadow-lg transition-all hover:bg-[#E55A2B]"
+                className="h-12 w-full gap-3 rounded-xl bg-primary text-base font-semibold text-white shadow-lg transition-all hover:bg-brand-orange-dark"
                 asChild
               >
                 <a

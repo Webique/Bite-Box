@@ -4,68 +4,143 @@
       "badge": "Specialized Cloud Kitchens",
       "title": "Bite Box",
       "subtitle": "Cloud Kitchens",
-      "description": "We provide specialized cloud kitchens for preparing the most delicious dishes and innovative operational solutions for food projects and entrepreneurs in the restaurant industry",
+      "description": "Cloud kitchens serving your needs - We provide complete infrastructure to operate your restaurant efficiently at lower costs",
       "tagline": "Your bite faster – Your project easier",
-      "cta": "Contact Us",
+      "cta": "Start Now",
       "learnMore": "Learn More"
     },
     "about": {
-      "badge": "About Us",
-      "title": "Your Partner in Cloud Kitchens",
-      "description": "Bite Box is a leading cloud kitchen platform offering comprehensive solutions for entrepreneurs in the food sector. We provide an ideal environment to launch and operate your food projects efficiently and cost-effectively.",
-      "vision": "Our Vision",
-      "visionText": "To be the first choice for entrepreneurs in the food sector and help transform their dreams into successful projects.",
-      "mission": "Our Mission",
-      "missionText": "Empowering entrepreneurs to launch their food projects easily by providing fully equipped kitchens and integrated support services."
+      "badge": "Our Mission",
+      "title": "Why Cloud Kitchens?",
+      "description": "The COVID-19 pandemic brought radical changes to the restaurant sector, with many closing while delivery services flourished due to increased demand. As an innovative concept to address this challenge, cloud kitchens emerged as a rewarding investment and business solution.",
+      "description2": "These are consolidated facilities that provide complete infrastructure and logistics services to operate multiple restaurants under one roof, without the need for public-facing space.",
+      "stat1": "150%+",
+      "stat1Label": "Increase in delivery demand since 2019",
+      "stat2": "44%",
+      "stat2Label": "Cost savings compared to traditional kitchens",
+      "stat3": "11 Billion",
+      "stat3Label": "SAR delivery market size in Saudi Arabia",
+      "stat4": "374 Billion",
+      "stat4Label": "USD expected global market size by 2030"
     },
     "services": {
-      "badge": "Our Services",
-      "title": "Complete Solutions for Your Food Project",
-      "description": "We offer a comprehensive range of services designed to support your project's success",
+      "badge": "Our Solutions",
+      "title": "Our Integrated Services",
+      "description": "We offer comprehensive solutions to launch and operate your food project successfully",
       "service1": {
-        "title": "Fully Equipped Kitchens",
-        "description": "Modern kitchens equipped with the latest equipment and tools needed to prepare all types of dishes"
+        "title": "Cloud Kitchens",
+        "description": "Fully equipped kitchens serving your needs with complete infrastructure and comprehensive logistics services"
       },
       "service2": {
-        "title": "Licenses & Permits",
-        "description": "We help you obtain all necessary licenses and permits to operate your project legally"
+        "title": "Cold Storage",
+        "description": "Fully secured refrigerated storage spaces to maintain the quality of your food products"
       },
       "service3": {
         "title": "Operational Support",
-        "description": "A specialized team to support you in all aspects of operations from planning to execution"
+        "description": "Specialized team to support you in all aspects of operations from planning to execution"
       },
       "service4": {
-        "title": "Delivery Solutions",
-        "description": "Partnerships with the best delivery companies to ensure your orders arrive quickly and with high quality"
+        "title": "Licenses & Permits",
+        "description": "We help you obtain all necessary licenses and permits to operate your project"
       },
       "service5": {
-        "title": "Digital Marketing",
-        "description": "Integrated marketing strategies to increase your brand visibility and attract more customers"
+        "title": "Delivery Platforms",
+        "description": "Work with multiple delivery platforms to ensure your orders reach the largest number of customers"
       },
       "service6": {
         "title": "Food Consulting",
         "description": "Food industry experts to help you develop a distinctive and profitable menu"
       }
     },
+    "howItWorks": {
+      "badge": "How It Works",
+      "title": "Simple Steps to Start Your Project",
+      "description": "We make your journey easy from idea to execution",
+      "step1": {
+        "title": "Contact Us",
+        "description": "Submit your request and our team will contact you to understand your needs"
+      },
+      "step2": {
+        "title": "Choose Your Kitchen",
+        "description": "Select the suitable space from our fully equipped kitchens"
+      },
+      "step3": {
+        "title": "Prepare Your Menu",
+        "description": "We help you develop a distinctive and profitable menu"
+      },
+      "step4": {
+        "title": "Start Working",
+        "description": "Launch your restaurant and start receiving orders"
+      }
+    },
     "features": {
-      "badge": "Why Bite Box?",
-      "title": "Features That Make Us the Best Choice",
+      "badge": "Why Us?",
+      "title": "Key Features",
+      "description": "We provide everything you need to launch your restaurant at the lowest costs and highest profits",
       "feature1": {
-        "title": "Low Cost",
-        "description": "Save on rent and setup costs and start your project with a smaller budget"
+        "title": "Ready Restaurant at Low Cost",
+        "description": "Save on rent and setup costs and start your project with 44% less budget"
       },
       "feature2": {
-        "title": "High Flexibility",
-        "description": "Choose the space and time that suits your project needs"
+        "title": "Various Spaces",
+        "description": "Kitchens with various sizes to choose the most suitable for your restaurant or project"
       },
       "feature3": {
-        "title": "Strategic Location",
-        "description": "Carefully selected locations to cover the largest number of customers"
+        "title": "Flexible Contracts",
+        "description": "Flexibility in contracting and operation to suit your project needs"
       },
       "feature4": {
-        "title": "Continuous Support",
-        "description": "Support team available 24/7 to help you"
+        "title": "Multiple Delivery Platforms",
+        "description": "Work with multiple delivery platforms to expand your customer reach"
+      },
+      "feature5": {
+        "title": "Secure Storage",
+        "description": "Fully secured refrigerated storage spaces to preserve your products"
+      },
+      "feature6": {
+        "title": "Highest Profits",
+        "description": "Achieve the highest profits with low operational costs"
       }
+    },
+    "gallery": {
+      "badge": "Photo Gallery",
+      "title": "Discover Our Kitchens",
+      "description": "Take a look at our facilities equipped with the latest equipment"
+    },
+    "testimonials": {
+      "badge": "Client Reviews",
+      "title": "What Our Partners Say",
+      "description": "Success stories from entrepreneurs who started with us",
+      "testimonial1": {
+        "name": "Ahmed Al-Shammari",
+        "role": "Founder of Burger House",
+        "text": "Thanks to Bite Box, I was able to launch my restaurant at a much lower cost than expected. The support provided is excellent and the facilities are top-notch."
+      },
+      "testimonial2": {
+        "name": "Sara Al-Otaibi",
+        "role": "Owner of Dessert Kitchen",
+        "text": "The flexibility in contracting and various spaces helped me start quickly. I recommend every entrepreneur to try cloud kitchens."
+      },
+      "testimonial3": {
+        "name": "Mohammed Al-Qahtani",
+        "role": "Restaurant Chain Manager",
+        "text": "We saved 44% of operational costs after moving to cloud kitchens. An excellent strategic decision to expand our business."
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Answers to Your Questions",
+      "description": "Everything you need to know about cloud kitchens",
+      "q1": "What are cloud kitchens?",
+      "a1": "Cloud kitchens are fully equipped facilities for preparing food for delivery only, without space for receiving customers. They provide complete infrastructure to operate your restaurant efficiently.",
+      "q2": "How much does it cost to start?",
+      "a2": "The cost varies depending on the kitchen size and required services. We offer various options to suit all budgets with savings up to 44% compared to traditional restaurants.",
+      "q3": "Do you help with obtaining licenses?",
+      "a3": "Yes, we provide full support to obtain all necessary licenses and permits to operate your project legally.",
+      "q4": "What is the contract duration?",
+      "a4": "We offer flexibility in contracting with multiple options starting from monthly to annual contracts according to your needs.",
+      "q5": "Can I work with multiple delivery platforms?",
+      "a5": "Absolutely! We help you integrate with all major delivery platforms to expand your customer reach."
     },
     "stats": {
       "kitchens": "Cloud Kitchens",
@@ -81,8 +156,23 @@
     },
     "contact": {
       "badge": "Contact Us",
-      "title": "We're Here to Help",
-      "description": "Please leave your name and reason for contact, and you will be served as soon as possible",
+      "title": "Start Your Journey Now",
+      "subtitle": "Send your details below to get more information",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "050 123 4567",
+      "email": "Email",
+      "emailPlaceholder": "name@example.com",
+      "company": "Company Name",
+      "companyPlaceholder": "Your company name (optional)",
+      "message": "Your Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "success": "Your message has been sent successfully! We will contact you soon.",
       "whatsappMessage": "Welcome to Bite Box Cloud Kitchens! 🍱☁️ We're happy to hear from you ✨"
     },
     "WhatsAppFloat": {
@@ -114,18 +204,18 @@
   "Header": {
     "nav": {
       "home": "Home",
-      "about": "About Us",
+      "about": "Our Mission",
       "services": "Services",
       "features": "Features",
       "contact": "Contact"
     },
-    "cta": "Contact Us",
+    "cta": "Start Now",
     "siteName": "Bite Box",
     "siteDescription": "Cloud Kitchens"
   },
   "Footer": {
     "home": "Home",
-    "about": "About Us",
+    "about": "Our Mission",
     "services": "Services",
     "features": "Features",
     "contact": "Contact",
@@ -138,7 +228,7 @@
     "brandName": "Bite Box",
     "copyright": "© {year} Bite Box Cloud Kitchens. All rights reserved",
     "allRightsReserved": "All rights reserved",
-    "companyDescription": "Specialized cloud kitchens for preparing delicious dishes and innovative operational solutions for food projects and entrepreneurs in the restaurant industry.",
+    "companyDescription": "Specialized cloud kitchens providing complete infrastructure to operate your restaurant efficiently at lower costs. We help you enter the market with lower costs and risks compared to traditional restaurants.",
     "followUs": "Follow Us",
     "tagline": "Your bite faster – Your project easier"
   }

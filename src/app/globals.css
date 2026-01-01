@@ -40,6 +40,23 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Brand Colors - Exposed to Tailwind */
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-orange-light: var(--brand-orange-light);
+  --color-brand-orange-dark: var(--brand-orange-dark);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-yellow-light: var(--brand-yellow-light);
+  --color-brand-green: var(--brand-green);
+  --color-brand-green-dark: var(--brand-green-dark);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-red: var(--brand-red);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-dark-light: var(--brand-dark-light);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-warm-white: var(--brand-warm-white);
+  --color-whatsapp: var(--whatsapp);
 }
 
 :root {
@@ -53,20 +70,24 @@
   --brand-yellow-light: #FFCC33;
   --brand-green: #2ECC71;
   --brand-green-dark: #27AE60;
+  --brand-blue: #3498DB;
+  --brand-purple: #9B59B6;
+  --brand-red: #E74C3C;
   --brand-dark: #1A1A2E;
   --brand-dark-light: #16213E;
   --brand-cream: #FFF8F0;
   --brand-warm-white: #FFFCF9;
+  --whatsapp: #25D366;
 
   /* Main backgrounds */
   --background: var(--brand-warm-white);
-  --foreground: #1A1A2E;
+  --foreground: var(--brand-dark);
 
   /* Cards and elevated surfaces */
   --card: #ffffff;
-  --card-foreground: #1A1A2E;
+  --card-foreground: var(--brand-dark);
   --popover: #ffffff;
-  --popover-foreground: #1A1A2E;
+  --popover-foreground: var(--brand-dark);
 
   /* Primary - Vibrant Orange */
   --primary: var(--brand-orange);
@@ -82,7 +103,7 @@
 
   /* Accent - Yellow */
   --accent: var(--brand-yellow);
-  --accent-foreground: #1A1A2E;
+  --accent-foreground: var(--brand-dark);
 
   /* Destructive */
   --destructive: #dc2626;
@@ -101,11 +122,11 @@
 
   /* Sidebar */
   --sidebar: #ffffff;
-  --sidebar-foreground: #1A1A2E;
+  --sidebar-foreground: var(--brand-dark);
   --sidebar-primary: var(--brand-orange);
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: var(--brand-cream);
-  --sidebar-accent-foreground: #1A1A2E;
+  --sidebar-accent-foreground: var(--brand-dark);
   --sidebar-border: #e8e4de;
   --sidebar-ring: var(--brand-orange);
 }
@@ -129,7 +150,7 @@
   --muted-foreground: #9ca3af;
 
   --accent: var(--brand-yellow);
-  --accent-foreground: #1A1A2E;
+  --accent-foreground: var(--brand-dark);
 
   --destructive: #ef4444;
 

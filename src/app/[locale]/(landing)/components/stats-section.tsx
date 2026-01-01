@@ -1,22 +1,51 @@
 "use client";
 
+import { ChefHat, Package, Star, Tag } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
 import AnimatedCounter from "@/components/animated-counter";
 
 const stats = [
-  { key: "kitchens" as const, value: 50, suffix: "+", emoji: "🍳" },
-  { key: "brands" as const, value: 100, suffix: "+", emoji: "🏷️" },
-  { key: "orders" as const, value: 10000, suffix: "+", emoji: "📦" },
-  { key: "satisfaction" as const, value: 98, suffix: "%", emoji: "⭐" }
+  {
+    key: "kitchens" as const,
+    value: 50,
+    suffix: "+",
+    icon: ChefHat,
+    color: "text-primary",
+    bgColor: "bg-primary/10"
+  },
+  {
+    key: "brands" as const,
+    value: 100,
+    suffix: "+",
+    icon: Tag,
+    color: "text-accent",
+    bgColor: "bg-accent/10"
+  },
+  {
+    key: "orders" as const,
+    value: 10000,
+    suffix: "+",
+    icon: Package,
+    color: "text-brand-green",
+    bgColor: "bg-brand-green/10"
+  },
+  {
+    key: "satisfaction" as const,
+    value: 98,
+    suffix: "%",
+    icon: Star,
+    color: "text-brand-blue",
+    bgColor: "bg-brand-blue/10"
+  }
 ];
 
 export default function StatsSection() {
   const t = useTranslations("IndexPage.stats");
 
   return (
-    <section className="relative overflow-hidden bg-[#FFF8F0] py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-brand-cream py-16 lg:py-24">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,53,0.05)_0%,transparent_70%)]" />
 
@@ -32,16 +61,16 @@ export default function StatsSection() {
               className="group text-center"
             >
               <m.div
-                whileHover={{ scale: 1.1 }}
-                className="mb-4 inline-block text-4xl transition-transform"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className={`mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-2xl ${stat.bgColor} transition-transform`}
               >
-                {stat.emoji}
+                <stat.icon className={`h-8 w-8 ${stat.color}`} />
               </m.div>
-              <div className="mb-2 text-4xl font-bold text-[#1A1A2E] md:text-5xl">
+              <div className="mb-2 text-4xl font-bold text-secondary md:text-5xl">
                 <AnimatedCounter end={stat.value} duration={2} />
-                <span className="text-[#FF6B35]">{stat.suffix}</span>
+                <span className="text-primary">{stat.suffix}</span>
               </div>
-              <p className="font-medium text-[#1A1A2E]/60">
+              <p className="font-medium text-secondary/60">
                 {t(stat.key as "kitchens")}
               </p>
             </m.div>
