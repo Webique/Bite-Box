@@ -15,7 +15,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="bg-linear-to-br from-primary via-brand-orange-light to-accent relative overflow-hidden py-20 lg:py-32"
+      className="bg-linear-to-br from-primary via-brand-orange-light to-accent relative overflow-hidden py-20 lg:py-24"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">

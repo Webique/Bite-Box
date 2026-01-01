@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative overflow-hidden">
       {/* Part 1: About Us - Text first, Image second */}
-      <div className="bg-brand-cream relative py-24 lg:py-32">
+      <div className="bg-brand-cream relative py-20 lg:py-24">
         {/* Background */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,107,53,0.06)_0%,transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_80%,rgba(255,184,0,0.06)_0%,transparent_50%)]" />
@@ -108,7 +108,7 @@ export default function AboutSection() {
       </div>
 
       {/* Part 2: Our Mission - Image first, Text second */}
-      <div className="relative bg-white pt-24 lg:pt-32">
+      <div className="relative bg-white py-20 lg:py-24">
         {/* Background */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_30%,rgba(255,107,53,0.04)_0%,transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_70%,rgba(255,184,0,0.04)_0%,transparent_50%)]" />

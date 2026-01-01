@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
   const t = useTranslations("IndexPage.testimonials");
 
   return (
-    <section className="bg-linear-to-br from-secondary via-brand-dark-light relative overflow-hidden to-[#0F0F1A] py-24 lg:py-36">
+    <section className="bg-linear-to-br from-secondary via-brand-dark-light relative overflow-hidden to-[#0F0F1A] py-20 lg:py-24">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="animate-blob bg-primary/8 absolute -start-40 top-20 h-96 w-96 rounded-full blur-3xl" />

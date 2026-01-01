@@ -119,7 +119,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-brand-cream relative overflow-hidden py-24 lg:py-36"
+      className="bg-brand-cream relative overflow-hidden py-20 lg:py-24"
     >
       {/* Background linears */}
       <div className="absolute inset-0 bg-[radial-linear(ellipse_at_30%_20%,rgba(255,107,53,0.08)_0%,transparent_50%)]" />

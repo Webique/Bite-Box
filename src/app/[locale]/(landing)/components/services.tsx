@@ -45,7 +45,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative overflow-hidden bg-white py-24 lg:py-36"
+      className="relative overflow-hidden bg-white py-20 lg:py-24"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,107,53,0.04)_0%,transparent_50%)]" />

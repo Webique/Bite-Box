@@ -45,7 +45,7 @@ export default function FeaturesSection() {
   return (
     <section
       id="features"
-      className="bg-linear-to-br from-secondary via-brand-dark-light relative overflow-hidden to-[#0F0F1A] py-24 lg:py-36"
+      className="bg-linear-to-br from-secondary via-brand-dark-light relative overflow-hidden to-[#0F0F1A] py-20 lg:py-24"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
