@@ -40,16 +40,16 @@ export default function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "shadow-primary/5 bg-white/95 shadow-lg backdrop-blur-lg"
-          : "bg-transparent"
+        "shadow-primary/5 bg-white/95 shadow-lg lg:bg-transparent lg:shadow-none",
+        isScrolled && "backdrop-blur-lg lg:bg-white/95 lg:shadow-lg"
       )}
     >
       {/* Top accent line */}
       <div
         className={cn(
           "bg-linear-to-r from-primary via-accent to-primary absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
-          isScrolled ? "opacity-100" : "opacity-0"
+          "opacity-100 lg:opacity-0",
+          isScrolled && "lg:opacity-100"
         )}
       />
 
@@ -63,24 +63,6 @@ export default function Header() {
             className="flex items-center gap-3"
           >
             <Logo className="transition-all duration-300 hover:scale-105" />
-            <div className="hidden sm:block">
-              <p
-                className={cn(
-                  "text-xl font-bold transition-colors",
-                  isScrolled ? "text-secondary" : "text-white"
-                )}
-              >
-                {t("siteName")}
-              </p>
-              <p
-                className={cn(
-                  "text-xs font-medium transition-colors",
-                  isScrolled ? "text-primary" : "text-accent"
-                )}
-              >
-                {t("siteDescription")}
-              </p>
-            </div>
           </m.div>
 
           {/* Desktop Navigation */}
@@ -118,7 +100,8 @@ export default function Header() {
             <LocaleSwitcher isTop={isScrolled} />
 
             <Button
-              className="bg-primary shadow-primary/30 hover:bg-brand-orange-dark hover:shadow-primary/40 group h-11 gap-2 rounded-full px-6 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              size="lg"
+              className="bg-primary shadow-primary/30 hover:bg-brand-orange-dark hover:shadow-primary/40 group h-11 min-w-[110px] gap-2 rounded-full px-6 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               asChild
             >
               <Link
@@ -137,12 +120,7 @@ export default function Header() {
             <LocaleSwitcher className="w-auto" isTop={isScrolled} />
 
             <button
-              className={cn(
-                "rounded-lg p-2 transition-all duration-300",
-                isScrolled
-                  ? "text-secondary hover:bg-primary/10"
-                  : "text-white hover:bg-white/10"
-              )}
+              className="text-secondary hover:bg-primary/10 rounded-lg p-2 transition-all duration-300"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
@@ -179,10 +157,7 @@ export default function Header() {
             opacity: isMenuOpen ? 1 : 0
           }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
-          className={cn(
-            "overflow-hidden lg:hidden",
-            isScrolled ? "bg-white" : "bg-secondary/95 backdrop-blur-lg"
-          )}
+          className="overflow-hidden lg:hidden"
         >
           <nav className="space-y-1 py-6">
             {navItems.map((item, index) => (
@@ -198,12 +173,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={cn(
-                    "block rounded-xl px-4 py-3 text-base font-medium transition-all",
-                    isScrolled
-                      ? "text-secondary hover:bg-primary/10 hover:text-primary"
-                      : "text-white hover:bg-white/10"
-                  )}
+                  className="text-secondary hover:bg-primary/10 hover:text-primary block rounded-xl px-4 py-3 text-base font-medium transition-all"
                 >
                   {item.label}
                 </Link>
