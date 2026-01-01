@@ -41,14 +41,14 @@ export default function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-white/95 shadow-lg shadow-primary/5 backdrop-blur-lg"
+          ? "shadow-primary/5 bg-white/95 shadow-lg backdrop-blur-lg"
           : "bg-transparent"
       )}
     >
       {/* Top accent line */}
       <div
         className={cn(
-          "bg-linear-to-r absolute inset-x-0 top-0 h-1 from-primary via-accent to-primary transition-opacity duration-500",
+          "bg-linear-to-r from-primary via-accent to-primary absolute inset-x-0 top-0 h-1 transition-opacity duration-500",
           isScrolled ? "opacity-100" : "opacity-0"
         )}
       />
@@ -99,7 +99,7 @@ export default function Header() {
                     isScrolled
                       ? "text-secondary hover:text-primary"
                       : "text-white/90 hover:text-white",
-                    "rounded-full hover:bg-primary/10"
+                    "hover:bg-primary/10 rounded-full"
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
@@ -118,7 +118,7 @@ export default function Header() {
             <LocaleSwitcher isTop={isScrolled} />
 
             <Button
-              className="group h-11 gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:scale-105 hover:bg-brand-orange-dark hover:shadow-xl hover:shadow-primary/40"
+              className="bg-primary shadow-primary/30 hover:bg-brand-orange-dark hover:shadow-primary/40 group h-11 gap-2 rounded-full px-6 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
               asChild
             >
               <Link
@@ -221,7 +221,7 @@ export default function Header() {
               className="mt-4 px-4 pt-4"
             >
               <Button
-                className="h-12 w-full gap-3 rounded-xl bg-primary text-base font-semibold text-white shadow-lg transition-all hover:bg-brand-orange-dark"
+                className="bg-primary hover:bg-brand-orange-dark h-12 w-full gap-3 rounded-xl text-base font-semibold text-white shadow-lg transition-all"
                 asChild
               >
                 <a

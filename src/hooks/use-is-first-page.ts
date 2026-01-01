@@ -1,11 +1,18 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+function getSnapshot() {
+  return !document.referrer;
+}
+
+function getServerSnapshot() {
+  return false;
+}
+
+function subscribe() {
+  // No external changes to subscribe to - referrer is static
+  return () => {};
+}
 
 export function useIsFirstPage(): boolean {
-  const [isFirstPage, setIsFirstPage] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsFirstPage(!document.referrer);
-  }, []);
-
-  return isFirstPage;
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }

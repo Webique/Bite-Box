@@ -22,9 +22,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-secondary text-white">
+    <footer className="bg-secondary relative text-white">
       {/* Top Gradient Line */}
-      <div className="bg-linear-to-r absolute inset-x-0 top-0 h-1 from-primary via-accent to-primary" />
+      <div className="bg-linear-to-r from-primary via-accent to-primary absolute inset-x-0 top-0 h-1" />
 
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,107,53,0.05)_0%,transparent_50%)]" />
@@ -47,7 +47,7 @@ export default function Footer() {
                 <p className="text-2xl font-bold text-white">
                   {t("brandName")}
                 </p>
-                <p className="text-sm text-primary">Cloud Kitchens</p>
+                <p className="text-primary text-sm">Cloud Kitchens</p>
               </div>
             </div>
 
@@ -56,9 +56,9 @@ export default function Footer() {
             </p>
 
             {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-3 rounded-xl border border-primary/20 bg-primary/10 px-4 py-3">
+            <div className="border-primary/20 bg-primary/10 inline-flex items-center gap-3 rounded-xl border px-4 py-3">
               <span className="text-2xl">🥡</span>
-              <span className="text-sm font-medium text-accent">
+              <span className="text-accent text-sm font-medium">
                 {t("tagline")}
               </span>
             </div>
@@ -72,7 +72,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="lg:col-span-3"
           >
-            <h3 className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">
+            <h3 className="text-primary mb-6 text-xs font-semibold uppercase tracking-widest">
               {t("quickLinks")}
             </h3>
             <ul className="space-y-3">
@@ -80,7 +80,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/60 transition-colors hover:text-primary"
+                    className="hover:text-primary text-sm text-white/60 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="lg:col-span-4"
           >
-            <h3 className="mb-6 text-xs font-semibold uppercase tracking-widest text-primary">
+            <h3 className="text-primary mb-6 text-xs font-semibold uppercase tracking-widest">
               {t("contactUs")}
             </h3>
             <div className="space-y-4">
@@ -106,8 +106,8 @@ export default function Footer() {
                 href={`tel:${siteConfig.support.whatsapp}`}
                 className="flex items-center gap-3 text-white/60 transition-colors hover:text-white"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                  <Phone className="h-5 w-5 text-primary" />
+                <div className="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-xl">
+                  <Phone className="text-primary h-5 w-5" />
                 </div>
                 <span dir="ltr" className="text-sm font-medium">
                   {siteConfig.support.phone}
@@ -121,16 +121,16 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-white/60 transition-colors hover:text-white"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-whatsapp/10">
-                  <WhatsAppIcon className="h-5 w-5 fill-whatsapp text-whatsapp" />
+                <div className="bg-whatsapp/10 flex h-10 w-10 items-center justify-center rounded-xl">
+                  <WhatsAppIcon className="fill-whatsapp text-whatsapp h-5 w-5" />
                 </div>
                 <span className="text-sm font-medium">WhatsApp</span>
               </a>
 
               {/* Location */}
               <div className="flex items-center gap-3 text-white/60">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10">
-                  <MapPin className="h-5 w-5 text-accent" />
+                <div className="bg-accent/10 flex h-10 w-10 items-center justify-center rounded-xl">
+                  <MapPin className="text-accent h-5 w-5" />
                 </div>
                 <span className="text-sm">{t("location")}</span>
               </div>

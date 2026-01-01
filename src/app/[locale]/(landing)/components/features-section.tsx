@@ -1,12 +1,12 @@
 "use client";
 
 import {
-    BadgeDollarSign,
-    Clock,
-    LayoutGrid,
-    Lock,
-    TrendingUp,
-    Truck
+  BadgeDollarSign,
+  Clock,
+  LayoutGrid,
+  Lock,
+  TrendingUp,
+  Truck
 } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
@@ -56,12 +56,12 @@ export default function FeaturesSection() {
   return (
     <section
       id="features"
-      className="bg-linear-to-br relative overflow-hidden from-secondary via-brand-dark-light to-[#0F0F1A] py-20 lg:py-32"
+      className="bg-linear-to-br from-secondary via-brand-dark-light relative overflow-hidden to-[#0F0F1A] py-20 lg:py-32"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="animate-blob absolute -start-40 top-20 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
-        <div className="animate-blob animation-delay-2000 absolute -end-40 bottom-20 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <div className="animate-blob bg-primary/10 absolute -start-40 top-20 h-80 w-80 rounded-full blur-3xl" />
+        <div className="animate-blob animation-delay-2000 bg-accent/10 absolute -end-40 bottom-20 h-80 w-80 rounded-full blur-3xl" />
         <div className="bg-size-[80px_80px] absolute inset-0 bg-[linear-gradient(rgba(255,107,53,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,53,0.02)_1px,transparent_1px)]" />
       </div>
 
@@ -74,8 +74,8 @@ export default function FeaturesSection() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            <span className="h-2 w-2 rounded-full bg-primary" />
+          <div className="border-primary/30 bg-primary/10 text-primary mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
+            <span className="bg-primary h-2 w-2 rounded-full" />
             {t("badge")}
           </div>
           <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -97,7 +97,7 @@ export default function FeaturesSection() {
               viewport={{ once: true }}
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-500 hover:border-primary/30 hover:bg-white/10">
+              <div className="hover:border-primary/30 relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10">
                 {/* Icon */}
                 <m.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
@@ -115,7 +115,7 @@ export default function FeaturesSection() {
                 </p>
 
                 {/* Hover Glow */}
-                <div className="absolute -bottom-20 -end-20 h-40 w-40 rounded-full bg-primary/20 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="bg-primary/20 absolute -bottom-20 -end-20 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
               </div>
             </m.div>
           ))}

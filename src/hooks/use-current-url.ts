@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+function getSnapshot() {
+  return window.location.href;
+}
+
+function getServerSnapshot() {
+  return "/";
+}
+
+function subscribe(callback: () => void) {
+  window.addEventListener("popstate", callback);
+  return () => window.removeEventListener("popstate", callback);
+}
 
 export function useCurrentUrl() {
-  const [currentUrl, setCurrentUrl] = useState<string>("/");
-
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : "";
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentUrl(window.location.href);
-    }
-  }, [pathname]);
-
-  return currentUrl;
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }

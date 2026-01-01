@@ -14,7 +14,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="bg-linear-to-br relative overflow-hidden from-primary via-brand-orange-light to-accent py-20 lg:py-32"
+      className="bg-linear-to-br from-primary via-brand-orange-light to-accent relative overflow-hidden py-20 lg:py-32"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -75,7 +75,7 @@ export default function CTASection() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               size="lg"
-              className="group h-14 gap-3 rounded-full bg-white px-8 text-lg font-semibold text-primary shadow-xl transition-all hover:scale-105 hover:bg-white hover:shadow-2xl"
+              className="text-primary group h-14 gap-3 rounded-full bg-white px-8 text-lg font-semibold shadow-xl transition-all hover:scale-105 hover:bg-white hover:shadow-2xl"
               asChild
             >
               <Link href={siteConfig.links.whatsapp} target="_blank">

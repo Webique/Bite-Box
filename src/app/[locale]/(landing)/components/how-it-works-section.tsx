@@ -48,14 +48,14 @@ export default function HowItWorksSection() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            <span className="h-2 w-2 rounded-full bg-primary" />
+          <div className="border-primary/30 bg-primary/10 text-primary mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
+            <span className="bg-primary h-2 w-2 rounded-full" />
             {t("badge")}
           </div>
-          <h2 className="mb-4 text-3xl font-bold text-secondary md:text-4xl lg:text-5xl">
+          <h2 className="text-secondary mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
             {t("title")}
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-secondary/70">
+          <p className="text-secondary/70 mx-auto max-w-2xl text-lg">
             {t("description")}
           </p>
         </m.div>
@@ -63,7 +63,7 @@ export default function HowItWorksSection() {
         {/* Steps */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="bg-linear-to-b absolute left-1/2 top-24 hidden h-[calc(100%-6rem)] w-px -translate-x-1/2 from-primary/20 via-accent/20 to-brand-green/20 lg:block" />
+          <div className="bg-linear-to-b from-primary/20 via-accent/20 to-brand-green/20 absolute start-1/2 top-24 hidden h-[calc(100%-6rem)] w-px -translate-x-1/2 lg:block rtl:translate-x-1/2" />
 
           <div className="grid gap-8 lg:grid-cols-4">
             {steps.map((step, index) => (
@@ -82,13 +82,13 @@ export default function HowItWorksSection() {
                   >
                     <step.icon className="h-10 w-10 text-white" />
                   </div>
-                  <div className="absolute -end-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full bg-secondary text-sm font-bold text-white">
+                  <div className="bg-secondary absolute -end-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white">
                     {step.number}
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-3 text-xl font-bold text-secondary">
+                <h3 className="text-secondary mb-3 text-xl font-bold">
                   {t(`${step.key}.title` as "step1.title")}
                 </h3>
                 <p className="text-secondary/70">
@@ -97,7 +97,7 @@ export default function HowItWorksSection() {
 
                 {/* Arrow for desktop */}
                 {index < steps.length - 1 && (
-                  <div className="absolute end-0 top-10 hidden -translate-y-1/2 translate-x-1/2 text-primary/30 lg:block rtl:rotate-180">
+                  <div className="text-primary/30 absolute end-0 top-10 hidden -translate-y-1/2 translate-x-1/2 lg:block rtl:rotate-180">
                     <svg
                       width="40"
                       height="40"

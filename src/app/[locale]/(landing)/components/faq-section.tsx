@@ -26,14 +26,14 @@ export default function FAQSection() {
             viewport={{ once: true }}
             className="lg:sticky lg:top-32"
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-              <span className="h-2 w-2 rounded-full bg-primary" />
+            <div className="border-primary/30 bg-primary/10 text-primary mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
+              <span className="bg-primary h-2 w-2 rounded-full" />
               {t("badge")}
             </div>
-            <h2 className="mb-6 text-3xl font-bold text-secondary md:text-4xl lg:text-5xl">
+            <h2 className="text-secondary mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
               {t("title")}
             </h2>
-            <p className="text-lg text-secondary/70">{t("description")}</p>
+            <p className="text-secondary/70 text-lg">{t("description")}</p>
           </m.div>
 
           {/* Right Side - FAQ Items */}
@@ -59,7 +59,7 @@ export default function FAQSection() {
                   }
                   className="flex w-full items-center justify-between p-6 text-start"
                 >
-                  <span className="pe-4 text-lg font-semibold text-secondary">
+                  <span className="text-secondary pe-4 text-lg font-semibold">
                     {t(item as "q1")}
                   </span>
                   <div
@@ -86,7 +86,7 @@ export default function FAQSection() {
                   className="overflow-hidden"
                 >
                   <div className="border-t border-gray-100 px-6 pb-6 pt-4">
-                    <p className="leading-relaxed text-secondary/70">
+                    <p className="text-secondary/70 leading-relaxed">
                       {t(item.replace("q", "a") as "a1")}
                     </p>
                   </div>

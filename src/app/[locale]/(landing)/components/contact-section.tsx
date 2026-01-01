@@ -31,7 +31,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-brand-cream py-20 lg:py-32"
+      className="bg-brand-cream relative overflow-hidden py-20 lg:py-32"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,107,53,0.05)_0%,transparent_50%)]" />
@@ -46,22 +46,22 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-              <span className="h-2 w-2 rounded-full bg-primary" />
+            <div className="border-primary/30 bg-primary/10 text-primary mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
+              <span className="bg-primary h-2 w-2 rounded-full" />
               {t("badge")}
             </div>
 
-            <h2 className="mb-6 text-3xl font-bold text-secondary md:text-4xl lg:text-5xl">
+            <h2 className="text-secondary mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
               {t("title")}
             </h2>
 
-            <p className="mb-10 text-lg text-secondary/70">{t("subtitle")}</p>
+            <p className="text-secondary/70 mb-10 text-lg">{t("subtitle")}</p>
 
             {/* Contact Options */}
             <div className="space-y-4">
               <Button
                 size="lg"
-                className="group h-14 w-full gap-3 rounded-2xl bg-whatsapp px-8 text-lg font-semibold text-white shadow-lg shadow-whatsapp/30 transition-all hover:scale-[1.02] hover:bg-[#20BD5A] hover:shadow-xl sm:w-auto"
+                className="bg-whatsapp shadow-whatsapp/30 group h-14 w-full gap-3 rounded-2xl px-8 text-lg font-semibold text-white shadow-lg transition-all hover:scale-[1.02] hover:bg-[#20BD5A] hover:shadow-xl sm:w-auto"
                 asChild
               >
                 <Link href={siteConfig.links.whatsapp} target="_blank">
@@ -73,10 +73,10 @@ export default function ContactSection() {
               <div className="flex items-center gap-3">
                 <a
                   href={`tel:${siteConfig.support.whatsapp}`}
-                  className="flex items-center gap-3 rounded-2xl border border-primary/20 bg-white px-6 py-4 text-secondary shadow-lg transition-all hover:border-primary/40 hover:shadow-xl"
+                  className="border-primary/20 text-secondary hover:border-primary/40 flex items-center gap-3 rounded-2xl border bg-white px-6 py-4 shadow-lg transition-all hover:shadow-xl"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
-                    <Phone className="h-5 w-5 text-primary" />
+                  <div className="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-xl">
+                    <Phone className="text-primary h-5 w-5" />
                   </div>
                   <span dir="ltr" className="font-semibold">
                     {siteConfig.support.phone}
@@ -93,17 +93,17 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl shadow-primary/5 lg:p-10">
+            <div className="shadow-primary/5 rounded-3xl border border-gray-100 bg-white p-8 shadow-2xl lg:p-10">
               {isSuccess ? (
                 <m.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="flex flex-col items-center justify-center py-12 text-center"
                 >
-                  <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-brand-green/10">
-                    <Send className="h-8 w-8 text-brand-green" />
+                  <div className="bg-brand-green/10 mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+                    <Send className="text-brand-green h-8 w-8" />
                   </div>
-                  <p className="text-lg font-semibold text-secondary">
+                  <p className="text-secondary text-lg font-semibold">
                     {t("success")}
                   </p>
                 </m.div>
@@ -112,32 +112,32 @@ export default function ContactSection() {
                   {/* Name Row */}
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label className="mb-2 block text-sm font-medium text-secondary">
+                      <label className="text-secondary mb-2 block text-sm font-medium">
                         {t("firstName")} *
                       </label>
                       <input
                         type="text"
                         required
                         placeholder={t("firstNamePlaceholder")}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-secondary outline-none transition-all placeholder:text-gray-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20"
+                        className="text-secondary focus:border-primary focus:ring-primary/20 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition-all placeholder:text-gray-400 focus:bg-white focus:ring-2"
                       />
                     </div>
                     <div>
-                      <label className="mb-2 block text-sm font-medium text-secondary">
+                      <label className="text-secondary mb-2 block text-sm font-medium">
                         {t("lastName")} *
                       </label>
                       <input
                         type="text"
                         required
                         placeholder={t("lastNamePlaceholder")}
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-secondary outline-none transition-all placeholder:text-gray-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20"
+                        className="text-secondary focus:border-primary focus:ring-primary/20 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition-all placeholder:text-gray-400 focus:bg-white focus:ring-2"
                       />
                     </div>
                   </div>
 
                   {/* Phone */}
                   <div>
-                    <label className="mb-2 block text-sm font-medium text-secondary">
+                    <label className="text-secondary mb-2 block text-sm font-medium">
                       {t("phone")} *
                     </label>
                     <div className="flex gap-3">
@@ -150,14 +150,14 @@ export default function ContactSection() {
                         required
                         dir="ltr"
                         placeholder={t("phonePlaceholder")}
-                        className="flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-secondary outline-none transition-all placeholder:text-gray-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20"
+                        className="text-secondary focus:border-primary focus:ring-primary/20 flex-1 rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition-all placeholder:text-gray-400 focus:bg-white focus:ring-2"
                       />
                     </div>
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="mb-2 block text-sm font-medium text-secondary">
+                    <label className="text-secondary mb-2 block text-sm font-medium">
                       {t("email")} *
                     </label>
                     <input
@@ -165,19 +165,19 @@ export default function ContactSection() {
                       required
                       dir="ltr"
                       placeholder={t("emailPlaceholder")}
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-secondary outline-none transition-all placeholder:text-gray-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20"
+                      className="text-secondary focus:border-primary focus:ring-primary/20 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition-all placeholder:text-gray-400 focus:bg-white focus:ring-2"
                     />
                   </div>
 
                   {/* Company */}
                   <div>
-                    <label className="mb-2 block text-sm font-medium text-secondary">
+                    <label className="text-secondary mb-2 block text-sm font-medium">
                       {t("company")}
                     </label>
                     <input
                       type="text"
                       placeholder={t("companyPlaceholder")}
-                      className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-secondary outline-none transition-all placeholder:text-gray-400 focus:border-primary focus:bg-white focus:ring-2 focus:ring-primary/20"
+                      className="text-secondary focus:border-primary focus:ring-primary/20 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition-all placeholder:text-gray-400 focus:bg-white focus:ring-2"
                     />
                   </div>
 
@@ -185,7 +185,7 @@ export default function ContactSection() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="h-14 w-full gap-3 rounded-xl bg-primary text-lg font-semibold text-white shadow-lg shadow-primary/30 transition-all hover:bg-brand-orange-dark hover:shadow-xl disabled:opacity-70"
+                    className="bg-primary shadow-primary/30 hover:bg-brand-orange-dark h-14 w-full gap-3 rounded-xl text-lg font-semibold text-white shadow-lg transition-all hover:shadow-xl disabled:opacity-70"
                   >
                     {isSubmitting ? (
                       <>

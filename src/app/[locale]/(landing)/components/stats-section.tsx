@@ -45,7 +45,7 @@ export default function StatsSection() {
   const t = useTranslations("IndexPage.stats");
 
   return (
-    <section className="relative overflow-hidden bg-brand-cream py-16 lg:py-24">
+    <section className="bg-brand-cream relative overflow-hidden py-16 lg:py-24">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,53,0.05)_0%,transparent_70%)]" />
 
@@ -66,11 +66,11 @@ export default function StatsSection() {
               >
                 <stat.icon className={`h-8 w-8 ${stat.color}`} />
               </m.div>
-              <div className="mb-2 text-4xl font-bold text-secondary md:text-5xl">
+              <div className="text-secondary mb-2 text-4xl font-bold md:text-5xl">
                 <AnimatedCounter end={stat.value} duration={2} />
                 <span className="text-primary">{stat.suffix}</span>
               </div>
-              <p className="font-medium text-secondary/60">
+              <p className="text-secondary/60 font-medium">
                 {t(stat.key as "kitchens")}
               </p>
             </m.div>

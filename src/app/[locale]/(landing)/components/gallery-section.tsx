@@ -35,7 +35,7 @@ export default function GallerySection() {
   const t = useTranslations("IndexPage.gallery");
 
   return (
-    <section className="relative overflow-hidden bg-brand-cream py-20 lg:py-32">
+    <section className="bg-brand-cream relative overflow-hidden py-20 lg:py-32">
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,107,53,0.05)_0%,transparent_50%)]" />
 
@@ -48,14 +48,14 @@ export default function GallerySection() {
           viewport={{ once: true }}
           className="mb-16 text-center"
         >
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            <span className="h-2 w-2 rounded-full bg-primary" />
+          <div className="border-primary/30 bg-primary/10 text-primary mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium">
+            <span className="bg-primary h-2 w-2 rounded-full" />
             {t("badge")}
           </div>
-          <h2 className="mb-4 text-3xl font-bold text-secondary md:text-4xl lg:text-5xl">
+          <h2 className="text-secondary mb-4 text-3xl font-bold md:text-4xl lg:text-5xl">
             {t("title")}
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-secondary/70">
+          <p className="text-secondary/70 mx-auto max-w-2xl text-lg">
             {t("description")}
           </p>
         </m.div>
@@ -83,12 +83,12 @@ export default function GallerySection() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Overlay */}
-                <div className="bg-linear-to-t absolute inset-0 from-secondary/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="bg-linear-to-t from-secondary/60 absolute inset-0 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                 {/* Hover Content */}
                 <div className="absolute inset-0 flex items-end p-6 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                   <div className="rounded-xl bg-white/90 px-4 py-2 backdrop-blur-sm">
-                    <p className="font-semibold text-secondary">{image.alt}</p>
+                    <p className="text-secondary font-semibold">{image.alt}</p>
                   </div>
                 </div>
               </div>
