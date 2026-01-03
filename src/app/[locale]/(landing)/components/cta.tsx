@@ -1,6 +1,5 @@
 "use client";
 
-import { Phone } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
@@ -84,19 +83,6 @@ export default function CTASection() {
                 {t("button")}
               </Link>
             </Button>
-
-            <div className="flex items-center gap-3 text-white">
-              <span className="hidden text-white/70 sm:inline">
-                {t("phone")}
-              </span>
-              <a
-                href={`tel:${siteConfig.support.whatsapp}`}
-                className="flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 px-6 py-3 font-semibold backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20"
-              >
-                <Phone className="h-5 w-5" />
-                <span dir="ltr">{siteConfig.support.phone}</span>
-              </a>
-            </div>
           </div>
         </m.div>
       </div>

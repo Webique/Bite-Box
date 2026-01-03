@@ -5,7 +5,7 @@
       "title": "Bite Box",
       "subtitle": "Cloud Kitchens",
       "description": "Cloud kitchens serving your needs - We provide complete infrastructure to operate your restaurant efficiently at lower costs",
-      "tagline": "Your bite faster – Your project easier",
+      "tagline": "Invest faster, better and at lower cost",
       "cta": "Start Now",
       "learnMore": "Learn More",
       "exploreServices": "Explore Services"
@@ -15,7 +15,7 @@
       "title": "Bite Box Cloud Kitchens",
       "subtitle": "Cloud kitchens and spaces serving your needs",
       "description": "We provide specialized cloud kitchens for preparing delicious dishes and innovative operational solutions for food projects and restaurant entrepreneurs.",
-      "description2": "We help you enter the market with lower costs and risks compared to traditional restaurants. Your bite faster, your project easier.",
+      "description2": "We help you enter the market with lower costs and risks compared to traditional restaurants. Invest faster, better and at lower cost.",
       "missionBadge": "Our Mission",
       "missionTitle": "Why Cloud Kitchens?",
       "missionDescription": "The COVID-19 pandemic brought radical changes to the restaurant sector, with many closing while delivery services flourished due to increased demand. As an innovative concept to address this challenge, cloud kitchens emerged as a rewarding investment and business solution.",
@@ -164,8 +164,7 @@
     "cta": {
       "title": "Ready to Launch Your Project?",
       "description": "Contact us today and get a free consultation to start your journey in the world of cloud kitchens",
-      "button": "Contact via WhatsApp",
-      "phone": "Or call us"
+      "button": "Contact via WhatsApp"
     },
     "contact": {
       "badge": "Contact Us",
@@ -189,9 +188,8 @@
       "whatsappMessage": "Welcome to Bite Box Cloud Kitchens! 🍱☁️ We're happy to hear from you ✨",
       "whatsapp": "WhatsApp",
       "whatsappDesc": "Chat with us directly",
-      "callUs": "Call Us",
       "emailUs": "Email",
-      "location": "Riyadh, Saudi Arabia",
+      "location": "Tabuk, Saudi Arabia",
       "chatOnWhatsapp": "Chat on WhatsApp"
     },
     "WhatsAppFloat": {
@@ -250,6 +248,6 @@
     "allRightsReserved": "All rights reserved",
     "companyDescription": "Specialized cloud kitchens providing complete infrastructure to operate your restaurant efficiently at lower costs. We help you enter the market with lower costs and risks compared to traditional restaurants.",
     "followUs": "Follow Us",
-    "tagline": "Your bite faster – Your project easier"
+    "tagline": "Invest faster, better and at lower cost"
   }
 }

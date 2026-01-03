@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone } from "lucide-react";
+import { MapPin } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
@@ -101,21 +101,6 @@ export default function Footer() {
               {t("contactUs")}
             </h3>
             <div className="space-y-4">
-              {/* Phone */}
-              <m.a
-                href={`tel:${siteConfig.support.phone}`}
-                className="flex items-center gap-3 text-white/60"
-                whileHover={{ x: 5, color: "rgba(255,255,255,1)" }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-xl">
-                  <Phone className="text-primary h-5 w-5" />
-                </div>
-                <span dir="ltr" className="text-sm font-medium">
-                  {siteConfig.support.phone}
-                </span>
-              </m.a>
-
               {/* WhatsApp */}
               <m.a
                 href={siteConfig.links.whatsapp}

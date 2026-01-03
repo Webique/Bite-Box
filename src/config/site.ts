@@ -15,7 +15,7 @@ export const siteConfig = {
   },
 
   location: {
-    city: "Riyadh",
+    city: "Tabuk",
     district: "",
     country: "Saudi Arabia"
   },

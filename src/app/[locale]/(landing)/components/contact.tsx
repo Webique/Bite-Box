@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, MessageCircle, Phone, Send, Sparkles } from "lucide-react";
+import { MapPin, MessageCircle, Send, Sparkles } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
@@ -182,15 +182,7 @@ export default function Contact() {
                 {t("whatsapp")}
               </ContactCard>
 
-              <ContactCard
-                href={`tel:${siteConfig.support.whatsapp}`}
-                icon={Phone}
-                index={1}
-              >
-                <span dir="ltr">{siteConfig.support.phone}</span>
-              </ContactCard>
-
-              <ContactCard icon={MapPin} index={2}>
+              <ContactCard icon={MapPin} index={1}>
                 {t("location")}
               </ContactCard>
             </div>
