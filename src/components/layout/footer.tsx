@@ -1,6 +1,6 @@
 "use client";
 
-import { Envelope, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
@@ -124,7 +124,7 @@ export default function Footer() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="bg-primary/10 flex h-10 w-10 items-center justify-center rounded-xl">
-                  <Envelope className="text-primary h-5 w-5" />
+                  <Mail className="text-primary h-5 w-5" />
                 </div>
                 <span className="text-sm font-medium">
                   {siteConfig.support.email}

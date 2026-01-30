@@ -1,6 +1,6 @@
 "use client";
 
-import { Envelope, MapPin, MessageCircle, Send, Sparkles } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Send, Sparkles } from "lucide-react";
 import * as m from "motion/react-m";
 import { useTranslations } from "next-intl";
 
@@ -184,7 +184,7 @@ export default function Contact() {
 
               <ContactCard
                 href={`mailto:${siteConfig.support.email}`}
-                icon={Envelope}
+                icon={Mail}
                 index={1}
               >
                 {siteConfig.support.email}
