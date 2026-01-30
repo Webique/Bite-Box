@@ -9,7 +9,7 @@ export const siteConfig = {
 
   support: {
     phone: "+966 58 212 4313",
-    email: "info@bitebox.sa",
+    email: "biteboxkitchens@gmail.com",
     whatsapp: "+966582124313",
     landline: ""
   },
