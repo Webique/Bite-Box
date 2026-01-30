@@ -133,6 +133,16 @@ export default function HeroSection() {
                 <Link href="#services">{t("hero.exploreServices")}</Link>
               </Button>
             </m.div>
+
+            {/* Prepare and Book Text */}
+            <m.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="text-base font-medium text-gray-300 md:text-lg"
+            >
+              {t("hero.prepareAndBook")}
+            </m.p>
           </div>
         </div>
       </div>
