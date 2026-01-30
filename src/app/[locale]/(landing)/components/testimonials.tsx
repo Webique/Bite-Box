@@ -23,16 +23,13 @@ export default function TestimonialsSection() {
   const t = useTranslations("IndexPage.testimonials");
 
   return (
-    <section className="bg-linear-to-br from-orange-50 via-orange-100/80 relative overflow-hidden to-orange-50/60 py-20 lg:py-24">
+    <section className="bg-linear-to-br from-primary via-brand-orange-light to-accent relative overflow-hidden py-20 lg:py-24">
       {/* Background elements */}
       <div className="absolute inset-0">
-        <div className="animate-blob bg-primary/10 absolute -start-40 top-20 h-96 w-96 rounded-full blur-3xl" />
-        <div className="animate-blob animation-delay-2000 bg-brand-yellow/10 absolute -end-40 bottom-20 h-96 w-96 rounded-full blur-3xl" />
-        <div className="animate-blob animation-delay-4000 bg-primary/8 absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
+        <div className="absolute -start-20 top-20 h-60 w-60 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -end-20 bottom-20 h-60 w-60 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)]" />
       </div>
-
-      {/* Subtle grid pattern */}
-      <div className="bg-size-[60px_60px] absolute inset-0 bg-[linear-gradient(rgba(255,107,53,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,53,0.03)_1px,transparent_1px)]" />
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Header */}
@@ -48,7 +45,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="border-primary/30 from-primary/20 to-brand-yellow/20 text-primary bg-linear-to-r mb-8 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium"
+            className="border-white/30 from-white/20 to-white/20 text-white bg-linear-to-r mb-8 inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium"
           >
             <m.span
               animate={{ rotate: [0, 15, -15, 0] }}
@@ -64,7 +61,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="mb-6 text-4xl font-bold text-secondary md:text-5xl lg:text-6xl"
+            className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl"
           >
             {t("title")}
           </m.h2>
@@ -74,7 +71,7 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-lg leading-relaxed text-secondary/70"
+            className="mx-auto max-w-2xl text-lg leading-relaxed text-white/90"
           >
             {t("description")}
           </m.p>
@@ -92,14 +89,14 @@ export default function TestimonialsSection() {
               whileHover={{ y: -8 }}
               className="group relative"
             >
-              <div className="hover:border-primary/40 relative h-full overflow-hidden rounded-3xl border border-orange-200/50 bg-white/80 p-8 backdrop-blur-sm transition-all duration-150 hover:bg-white hover:shadow-lg">
+              <div className="hover:border-white/40 relative h-full overflow-hidden rounded-3xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm transition-all duration-150 hover:bg-white/20 hover:shadow-lg">
                 {/* Quote Icon */}
                 <m.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.2 }}
-                  className="from-primary/20 to-brand-yellow/20 group-hover:from-primary/30 group-hover:to-brand-yellow/30 bg-linear-to-br mb-6 flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-150"
+                  className="from-white/20 to-white/20 group-hover:from-white/30 group-hover:to-white/30 bg-linear-to-br mb-6 flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-150"
                 >
-                  <Quote className="text-primary h-7 w-7" />
+                  <Quote className="text-white h-7 w-7" />
                 </m.div>
 
                 {/* Rating */}
@@ -112,28 +109,28 @@ export default function TestimonialsSection() {
                       transition={{ delay: index * 0.15 + i * 0.05 + 0.3 }}
                       viewport={{ once: true }}
                     >
-                      <Star className="fill-brand-yellow text-brand-yellow h-5 w-5" />
+                      <Star className="fill-white text-white h-5 w-5" />
                     </m.div>
                   ))}
                 </div>
 
                 {/* Text */}
-                <p className="mb-8 text-lg leading-relaxed text-secondary/80">
+                <p className="mb-8 text-lg leading-relaxed text-white/80">
                   &quot;{t(`${testimonial.key}.text`)}&quot;
                 </p>
 
                 {/* Author */}
-                <div className="mt-auto border-t border-orange-200/50 pt-6">
-                  <p className="text-lg font-semibold text-secondary">
+                <div className="mt-auto border-t border-white/20 pt-6">
+                  <p className="text-lg font-semibold text-white">
                     {t(`${testimonial.key}.name`)}
                   </p>
-                  <p className="text-primary/80 text-sm font-medium">
+                  <p className="text-white/80 text-sm font-medium">
                     {t(`${testimonial.key}.role`)}
                   </p>
                 </div>
 
                 {/* Hover Glow */}
-                <div className="from-primary/30 to-brand-yellow/20 bg-linear-to-br absolute -bottom-24 -end-24 h-48 w-48 rounded-full opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="from-white/30 to-white/20 bg-linear-to-br absolute -bottom-24 -end-24 h-48 w-48 rounded-full opacity-0 blur-3xl transition-opacity duration-300 group-hover:opacity-100" />
               </div>
             </m.div>
           ))}
