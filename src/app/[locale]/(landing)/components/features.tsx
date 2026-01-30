@@ -45,17 +45,17 @@ export default function FeaturesSection() {
   return (
     <section
       id="features"
-      className="bg-linear-to-br from-secondary via-brand-dark-light relative overflow-hidden to-[#0F0F1A] py-20 lg:py-24"
+      className="bg-linear-to-br from-orange-50 via-orange-100/80 relative overflow-hidden to-orange-50/60 py-20 lg:py-24"
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="animate-blob bg-primary/8 absolute -start-40 top-20 h-96 w-96 rounded-full blur-3xl" />
-        <div className="animate-blob animation-delay-2000 bg-brand-yellow/8 absolute -end-40 bottom-20 h-96 w-96 rounded-full blur-3xl" />
-        <div className="animate-blob animation-delay-4000 bg-primary/5 absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
+        <div className="animate-blob bg-primary/10 absolute -start-40 top-20 h-96 w-96 rounded-full blur-3xl" />
+        <div className="animate-blob animation-delay-2000 bg-brand-yellow/10 absolute -end-40 bottom-20 h-96 w-96 rounded-full blur-3xl" />
+        <div className="animate-blob animation-delay-4000 bg-primary/8 absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
       </div>
 
       {/* Subtle grid pattern */}
-      <div className="bg-size-[60px_60px] absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]" />
+      <div className="bg-size-[60px_60px] absolute inset-0 bg-[linear-gradient(rgba(255,107,53,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,53,0.03)_1px,transparent_1px)]" />
 
       <div className="container relative z-10 mx-auto px-4">
         {/* Header */}
@@ -87,7 +87,7 @@ export default function FeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl"
+            className="mb-6 text-4xl font-bold text-secondary md:text-5xl lg:text-6xl"
           >
             {t("title")}
           </m.h2>
@@ -97,7 +97,7 @@ export default function FeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl text-lg leading-relaxed text-white/60"
+            className="mx-auto max-w-2xl text-lg leading-relaxed text-secondary/70"
           >
             {t("description")}
           </m.p>
@@ -115,7 +115,7 @@ export default function FeaturesSection() {
               whileHover={{ y: -8 }}
               className="group relative"
             >
-              <div className="hover:border-primary/40 relative h-full overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-all duration-150 hover:bg-white/10">
+              <div className="hover:border-primary/40 relative h-full overflow-hidden rounded-3xl border border-orange-200/50 bg-white/80 p-8 backdrop-blur-sm transition-all duration-150 hover:bg-white hover:shadow-lg">
                 {/* Icon */}
                 <m.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
@@ -126,10 +126,10 @@ export default function FeaturesSection() {
                 </m.div>
 
                 {/* Content */}
-                <h3 className="group-hover:text-primary mb-3 text-xl font-bold text-white transition-colors duration-150">
+                <h3 className="group-hover:text-primary mb-3 text-xl font-bold text-secondary transition-colors duration-150">
                   {t(`${feature.key}.title`)}
                 </h3>
-                <p className="leading-relaxed text-white/60">
+                <p className="leading-relaxed text-secondary/70">
                   {t(`${feature.key}.description`)}
                 </p>
 
