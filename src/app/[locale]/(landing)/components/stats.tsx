@@ -27,7 +27,7 @@ const stats = [
   },
   {
     key: "satisfaction" as const,
-    value: 98,
+    value: 100,
     suffix: "%",
     icon: Star
   }
